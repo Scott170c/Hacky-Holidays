@@ -12,7 +12,7 @@ import {
   Heading,
   Text,
 } from 'theme-ui'
-const fall = (rotationDirection) => keyframes`
+const fall = (  rotationDirection: number) => keyframes`
   from {
     transform: translateY(-10%) rotate(0deg);
   }
