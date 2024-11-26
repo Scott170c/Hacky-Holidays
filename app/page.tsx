@@ -1,101 +1,200 @@
-import Image from "next/image";
+"use client";
+import { keyframes } from '@emotion/react'
 
+// import Image from "next/image";
+import {
+  Box,
+  Button,
+  Image,
+  Flex,
+  Badge,
+  Container,
+  Grid,
+  Heading,
+  Text,
+  Card
+} from 'theme-ui'
+const fall = (rotationDirection) => keyframes`
+  from {
+    transform: translateY(-10%) rotate(0deg);
+  }
+  to {
+    transform: translateY(2000%) rotate(${rotationDirection * 360}deg);
+  }
+`;
 export default function Home() {
+  
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  <Grid gap = {0}>     
+        <Box
+        sx={{
+          position: 'absolute',
+          top: -10,
+          left: 0,
+        }}>
+          <Button>
+            <Image src="https://assets.hackclub.com/flag-orpheus-top.svg" sx ={{
+              height:"10vh"
+            }}></Image>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+        
+          </Button>
+
+        </Box>
+
+       
+    
+        {/* {Array.from({ length: 50 }).map((_, index) => (
+          <span
+            key={index}
+            className="snowflake"
+            style={{
+              left: `${Math.random() * 100}vw`,
+              fontSize: `${Math.random() * 20 + 10}px`,
+              animationDelay: `${Math.random() * 10}s`,
+            }}
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+            ❄
+          </span>
+        ))} */}
+        {Array.from({ length: 50 }).map((_, index) => {
+          const randomRotationDirection = Math.random() > 0.5 ? 1 : -1;
+          const randomSpeed = Math.random() * 5 + 5;
+          return(
+          <Text
+          key={index}
+          sx={{
+            position: 'absolute',
+            top: '-10%',
+            zIndex: -9999,
+            left: `${Math.random() * 90}vw`,
+            animation: `${fall(randomRotationDirection)} ${randomSpeed}s linear infinite`,
+            color: 'white',
+            fontSize: `${Math.random() * 20 + 10}px`,
+            animationDelay: `${Math.random() * 10}s`,
+            transform: `rotate(${randomRotationDirection * 360}deg)`,
+
+
+
+          }}
+          >
+            ❄
+          </Text>)
+        })}
+      
+          <Box>
+            
+          </Box>   
+          <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'row',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: '1rem',
+            padding: '1rem',
+            width: '100%',
+            margin: 'auto',
+            textAlign: 'center'
+          }}
+          >
+            <Image 
+                src="https://cdn.discordapp.com/attachments/1049738373880881217/1310824966178209792/image.png?ex=6746a061&is=67454ee1&hm=d2896e141425e66ea0738ac6090182920d0e1be921bdc737555de75a011d45a2&" 
+                alt="Example PCB!" 
+                style={{ width: '25%', height: '24%' }}
+                sx={{
+                  width: '300px',
+                  height: '200px',
+                  // borderRadius: '16px',
+                  // boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)',
+                  '&:hover': {
+                    transform: 'scale(1.1)',
+                    transition: 'transform 0.3s ease-in-out',
+                  },
+                }}
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+            <Box
+            sx={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'left',
+              // justifyContent: 'left',
+              ml: '2vw',
+              mt: '12%',
+              maxWidth: '100%',
+              textAlign: 'center'
+            }}
+            >
+            <Heading as="h1" variant="styles.h1" 
+                  sx={{ 
+                    fontFamily: 'var(--font-inter)', 
+                    fontSize: '5rem', 
+                    fontWeight:900,
+                    textAlign: 'left'
+
+
+                  }}>
+              Hacky Holidays!
+            </Heading>
+            <Heading as="h2" variant="styles.h1" 
+                  sx={{ 
+                    fontFamily: 'var(--font-inter)', 
+                    fontSize: '1.5rem', 
+                    fontWeight:900 
+                  }}>
+              Design a PCB holiday decoration this winter, get a PCB grant!
+            </Heading>
+            <Button
+            sx={{
+              fontFamily: 'var(--font-inter)',
+              fontSize: '1rem',
+              fontWeight: 900,
+              color: 'white',
+              bg: '#FF8585',
+              width: 'fit-content',
+              borderRadius: '1rem',
+              padding: '1rem 2rem',
+              mt: '1rem'
+            }}>
+                <b>Register Now!</b>
+            </Button>
+
+
+            </Box>
+       
+          </Box>
+     
+
+          <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            backgroundColor: 'white',
+            color: 'black',
+            width: '100%',
+            // margin: 'auto',
+            height: '100vh',
+            mt: '20vh',
+            textAlign: 'center'
+          }}>
+              Section 2
+              hello world
+              
+          </Box>
+          <div style={{
+            backgroundColor: '#FF8D8D',
+            height: '250%',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            fontSize: '1.2vw',
+            color: 'white'
+          }}>
+            Made with ❤️ and ❄️ by Bright Li & Scott Chiang
+            </div>
+    </Grid>
   );
 }

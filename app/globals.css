@@ -3,17 +3,25 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: hsl(204, 100%, 87%);
+  --foreground: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #BEE5FF;
     --foreground: #ededed;
   }
 }
+@font-face {
+  font-family: 'Inter';
+  src: url('./fonts/Inter-VariableFont_opsz,wght.ttf') format('ttf');
+  font-optical-sizing: auto;
 
+
+ 
+
+}
 body {
   color: var(--foreground);
   background: var(--background);
