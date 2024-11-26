@@ -6,13 +6,10 @@ import {
   Box,
   Button,
   Image,
-  Flex,
-  Badge,
-  Container,
+  
   Grid,
   Heading,
   Text,
-  Card
 } from 'theme-ui'
 const fall = (rotationDirection) => keyframes`
   from {
