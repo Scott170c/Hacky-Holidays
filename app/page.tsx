@@ -24,19 +24,24 @@ export default function Home() {
   
   return (
   <Grid gap = {0}>     
+
         <Box
         sx={{
           position: 'absolute',
           top: -10,
           left: 0,
         }}>
-          <Button>
+          <a href="https://hackclub.com" target="_blank">
+          <Button  >
             <Image src="https://assets.hackclub.com/flag-orpheus-top.svg" sx ={{
               height:"10vh"
             }}></Image>
 
         
           </Button>
+
+          </a>
+          
 
         </Box>
 
@@ -99,7 +104,7 @@ export default function Home() {
             <Image 
                 src="https://cdn.discordapp.com/attachments/1049738373880881217/1310824966178209792/image.png?ex=6746a061&is=67454ee1&hm=d2896e141425e66ea0738ac6090182920d0e1be921bdc737555de75a011d45a2&" 
                 alt="Example PCB!" 
-                style={{ width: '25%', height: '24%' }}
+                style={{ width: '25%', height: '24%', paddingTop: '3vh'}}
                 sx={{
                   width: '300px',
                   height: '200px',
@@ -167,18 +172,97 @@ export default function Home() {
           sx={{
             display: 'flex',
             flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
+            // alignItems: 'center',
+            // justifyContent: 'center',
             backgroundColor: 'white',
             color: 'black',
             width: '100%',
             // margin: 'auto',
             height: '100vh',
             mt: '20vh',
-            textAlign: 'center'
+            // textAlign: 'center'
           }}>
-              Section 2
-              hello world
+              <Heading as="h3"   sx={{ 
+                    margin: 20,
+                    fontFamily: 'var(--font-inter)', 
+                    fontSize: '1.5rem', 
+                    fontWeight:900 
+                  }} >Info Blurb goes here</Heading>
+              <Grid columns={3} gap = {300} sx={{
+                mt: '5vh',
+                width: '100%',
+                textAlign: 'center',
+                justifyContent: 'center',
+                flexDirection: 'row',
+                alignItems: 'center',
+              }}>
+                  <Box sx={{
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    display: 'flex',
+                    flexDirection: 'column',
+                  }}>
+                    <Heading as="h4"   sx={{
+
+                      fontFamily: 'var(--font-inter)',
+                      fontWeight: 900,
+                    } }>Design a Decoration</Heading>
+                    <Image sx={{
+                      width:'200px',
+                      height:'200px',
+                      borderRadius: '16px',
+                    }}></Image>
+
+                  </Box>
+                  <Box sx={{
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    display: 'flex',
+                    flexDirection: 'column',
+                  }}>
+                         <Heading as="h4"   sx={{
+                      fontFamily: 'var(--font-inter)',
+                      fontWeight: 900,
+                    } }>Submit a PR</Heading>
+                       <Image sx={{
+                      width:'200px',
+                      height:'200px',
+                      borderRadius: '16px',
+                    }}></Image>
+                  </Box>
+                  <Box sx={{
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    display: 'flex',
+                    flexDirection: 'column',
+                  }}>
+                  <Heading as="h4"   sx={{
+                      fontFamily: 'var(--font-inter)',
+                      fontWeight: 900,
+                    } }>Get it Shipped!</Heading>
+                       <Image sx={{
+                      width:'200px',
+                      height:'200px',
+                      borderRadius: '16px',
+                    }}></Image>
+                  </Box>
+              </Grid>
+              <Heading as = "h3" sx={{
+                textAlign: 'left',
+                fontFamily: 'var(--font-inter)',
+                fontWeight: 900,
+                margin: '4vh',
+              }}>
+                Requirements:
+              </Heading>
+              <Text sx={{
+                textAlign: 'left',
+                fontFamily: 'var(--font-inter)',
+                fontWeight: 900,
+                margin: '2vh',
+                ml: '4vh'
+              }}>
+                - Must be a student in high school or below </Text>
               
           </Box>
           <div style={{
@@ -191,7 +275,7 @@ export default function Home() {
             fontSize: '1.2vw',
             color: 'white'
           }}>
-            Made with ❤️ and ❄️ by Bright Li & Scott Chiang
+            Made with ❤️ and ❄️ by Bright Li (@bright li) & Scott Chiang (@Scott)
             </div>
     </Grid>
   );
