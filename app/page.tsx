@@ -85,17 +85,15 @@ export default function Home() {
           </Text>)
         })}
       
-          <Box>
             
-          </Box>   
           <Box
           sx={{
             display: 'flex',
-            flexDirection: 'row',
+            flexDirection:['column', 'row'],
             alignItems: 'center',
             justifyContent: 'center',
-            gap: '1rem',
-            padding: '1rem',
+            // gap: '1rem',
+            // padding: '1rem',
             width: '100%',
             margin: 'auto',
             textAlign: 'center'
@@ -122,8 +120,8 @@ export default function Home() {
               flexDirection: 'column',
               alignItems: 'left',
               // justifyContent: 'left',
-              ml: '2vw',
-              mt: '12%',
+              ml: ['0vw','2vw'],
+              mt: ['1%','12%'],
               maxWidth: '100%',
               textAlign: 'center'
             }}
@@ -133,7 +131,7 @@ export default function Home() {
                     fontFamily: 'var(--font-inter)', 
                     fontSize: '5rem', 
                     fontWeight:900,
-                    textAlign: 'left'
+                    textAlign: ['center','center','left']
 
 
                   }}>
@@ -149,12 +147,13 @@ export default function Home() {
             </Heading>
             <Button
             sx={{
+              mx: 'auto',
               fontFamily: 'var(--font-inter)',
               fontSize: '1rem',
               fontWeight: 900,
               color: 'white',
               bg: '#FF8585',
-              width: 'fit-content',
+              // width: 'fit-content',
               borderRadius: '1rem',
               padding: '1rem 2rem',
               mt: '1rem'
@@ -168,7 +167,7 @@ export default function Home() {
           </Box>
      
 
-          <Box
+          <Box //section 2
           sx={{
             display: 'flex',
             flexDirection: 'column',
@@ -178,7 +177,8 @@ export default function Home() {
             color: 'black',
             width: '100%',
             // margin: 'auto',
-            height: '100vh',
+            height:['auto', '100vh'],
+
             mt: '20vh',
             // textAlign: 'center'
           }}>
@@ -188,7 +188,7 @@ export default function Home() {
                     fontSize: '1.5rem', 
                     fontWeight:900 
                   }} >Info Blurb goes here</Heading>
-              <Grid columns={3} gap = {300} sx={{
+              <Grid columns= {[1,1,1,3]}gap = {[50,5,20,300]} sx={{
                 mt: '5vh',
                 width: '100%',
                 textAlign: 'center',
@@ -265,18 +265,18 @@ export default function Home() {
                 - Must be a student in high school or below </Text>
               
           </Box>
-          <div style={{
+          <Box sx={{
             backgroundColor: '#FF8D8D',
             height: '250%',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'center',
-            fontSize: '1.2vw',
+            fontSize: ['3vw','1.2vw'],
             color: 'white'
           }}>
             Made with ❤️ and ❄️ by Bright Li (@bright li) & Scott Chiang (@Scott)
-            </div>
+            </Box>
     </Grid>
   );
 }
