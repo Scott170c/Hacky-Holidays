@@ -19,8 +19,7 @@ const fadeIn = keyframes({ from: { opacity: 0 }, to: { opacity: 1 } })
 export default function guide() {
   return (
    <div>
-    hello world!
-
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
    </div>
   );
 }

@@ -1,7 +1,12 @@
 "use client";
+
+
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { keyframes } from '@emotion/react'
+import '@google/model-viewer';
+import Script from 'next/script';
 
+ 
 // import Image from "next/image";
 import {
   Box,
@@ -12,6 +17,11 @@ import {
   Heading,
   Text,
 } from 'theme-ui'
+import dynamic from 'next/dynamic';
+
+// const ModelViewer = dynamic(() => import('./ModelViewer'), { ssr: false });
+import ModelViewer from './ModelViewer.js';
+
 const fall = (  rotationDirection: number) => keyframes`
   from {
     transform: translateY(-10%) rotate(0deg);
@@ -23,8 +33,8 @@ const fall = (  rotationDirection: number) => keyframes`
 export default function Home() {
   
   return (
-  <Grid gap = {0}>     
-
+  <Grid gap = {0}>   
+  
         <Box
         sx={{
           position: 'absolute',
@@ -89,20 +99,25 @@ export default function Home() {
           <Box
           sx={{
             display: 'flex',
-            flexDirection:['column', 'row'],
+            flexDirection:['column','column', 'row'],
             alignItems: 'center',
             justifyContent: 'center',
-            // gap: '1rem',
-            // padding: '1rem',
+            gap: '1rem',
+            padding: '1rem',
+            paddingRight: '3rem',
             width: '100%',
             margin: 'auto',
-            textAlign: 'center'
+            mt: '15vh',
+            textAlign: 'center',
+            // height: '65vh'
           }}
           >
+                        <ModelViewer/>
+{/* 
             <Image 
-                src="https://cdn.discordapp.com/attachments/1049738373880881217/1310824966178209792/image.png?ex=6746a061&is=67454ee1&hm=d2896e141425e66ea0738ac6090182920d0e1be921bdc737555de75a011d45a2&" 
+                src="https://cloud-1mi3pnd3v-hack-club-bot.vercel.app/0image.png" 
                 alt="Example PCB!" 
-                style={{ width: '25%', height: '24%', paddingTop: '3vh'}}
+                style={{ width: '35%', height: '34%' }}
                 sx={{
                   width: '300px',
                   height: '200px',
@@ -113,7 +128,7 @@ export default function Home() {
                     transition: 'transform 0.3s ease-in-out',
                   },
                 }}
-            />
+            /> */}
             <Box
             sx={{
               display: 'flex',
@@ -121,7 +136,7 @@ export default function Home() {
               alignItems: 'left',
               // justifyContent: 'left',
               ml: ['0vw','2vw'],
-              mt: ['1%','12%'],
+              // mt: ['1%','12%'],
               maxWidth: '100%',
               textAlign: 'center'
             }}
@@ -129,7 +144,7 @@ export default function Home() {
             <Heading as="h1" variant="styles.h1" 
                   sx={{ 
                     fontFamily: 'var(--font-inter)', 
-                    fontSize: '5rem', 
+                    fontSize: '6rem', 
                     fontWeight:900,
                     textAlign: ['center','center','left']
 
@@ -140,20 +155,20 @@ export default function Home() {
             <Heading as="h2" variant="styles.h1" 
                   sx={{ 
                     fontFamily: 'var(--font-inter)', 
-                    fontSize: '1.5rem', 
+                    fontSize: '2rem', 
                     fontWeight:900 
                   }}>
-              Design a PCB holiday decoration this winter, get a PCB grant!
+              Design a PCB holiday decoration <u><a style={{color:"#5297FF"}} href="https://google.com">this winter</a></u>, get a PCB grant!
             </Heading>
             <Button
             sx={{
-              mx: 'auto',
+              mx: ['auto',0],
               fontFamily: 'var(--font-inter)',
-              fontSize: '1rem',
+              fontSize: '1.5rem',
               fontWeight: 900,
               color: 'white',
               bg: '#FF8585',
-              // width: 'fit-content',
+              width: 'fit-content',
               borderRadius: '1rem',
               padding: '1rem 2rem',
               mt: '1rem'
@@ -186,8 +201,12 @@ export default function Home() {
                     margin: 20,
                     fontFamily: 'var(--font-inter)', 
                     fontSize: '1.5rem', 
-                    fontWeight:900 
-                  }} >Info Blurb goes here</Heading>
+                    fontWeight:500,
+                    paddingTop: '0.5rem',
+                    paddingLeft: '5rem',
+                    paddingRight: '5rem'
+                  }} >Design a unique PCB decoration (all art made by you!) from scratch and submit it to the project gallery via a pull request in the GitHub repository before [set date]! <br></br>
+                  Once your PR gets approved, you can get your PCB decoration shipped just in time for the holidays!🎄</Heading>
               <Grid columns= {[1,1,1,3]}gap = {[50,5,20,300]} sx={{
                 mt: '5vh',
                 width: '100%',
