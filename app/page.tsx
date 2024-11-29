@@ -15,7 +15,7 @@ import {
   Grid,
   Heading,
   Text,
-} from 'theme-ui'
+} from 'theme-ui';
 import dynamic from 'next/dynamic';
 
 // const ModelViewer = dynamic(() => import('./ModelViewer'), { ssr: false });
