@@ -12,7 +12,6 @@ import {
   Box,
   Button,
   Image,
-  
   Grid,
   Heading,
   Text,
@@ -34,7 +33,7 @@ export default function Home() {
   
   return (
   <Grid gap = {0} sx={{
-    backgroundImage: 'linear-gradient(to bottom, #3EB2FF, #DCF1FF)', 
+    backgroundImage: 'linear-gradient(to bottom, #25A8FF, #DCF1FF)', 
 
   }}>   
 
@@ -171,7 +170,7 @@ export default function Home() {
               fontSize: '1.5rem',
               fontWeight: 900,
               color: 'white',
-              bg: '#FF8585',
+              bg: '#f90b0b',
               width: 'fit-content',
               borderRadius: '1rem',
               padding: '1rem 2rem',
