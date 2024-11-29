@@ -34,7 +34,7 @@ export default function Home() {
   
   return (
   <Grid gap = {0} sx={{
-    backgroundImage: 'linear-gradient(to bottom, #3EB2FF, #FFFFFF)', 
+    backgroundImage: 'linear-gradient(to bottom, #3EB2FF, #DCF1FF)', 
 
   }}>   
 
@@ -148,7 +148,7 @@ export default function Home() {
             <Heading as="h1" variant="styles.h1" 
                   sx={{ 
                     fontFamily: 'var(--font-inter)', 
-                    fontSize: '6rem', 
+                    fontSize: '7rem', 
                     fontWeight:900,
                     textAlign: ['center','center','left']
 
@@ -219,7 +219,7 @@ export default function Home() {
                 justifyContent: 'center',
                 flexDirection: 'row',
                 alignItems: 'center',
-                backgroundColor: '#FFFFFF42',
+                backgroundColor: 'rgba(255, 255, 255, 40%)',
                 borderRadius: '32px',
                 mx: '32px',
                 paddingBottom: '2vh',
@@ -230,16 +230,19 @@ export default function Home() {
                     justifyContent: 'center',
                     display: 'flex',
                     flexDirection: 'column',
+                    paddingTop: '2rem'
                   }}>
                     <Heading as="h4"   sx={{
-
                       fontFamily: 'var(--font-inter)',
                       fontWeight: 900,
+                      fontSize: '1.5vw',
+                      paddingBottom: '1.2rem'
                     } }>Design a Decoration</Heading>
                     <Image sx={{
                       width:'30rem',
                       height:'30rem',
                       borderRadius: '16px',
+                      paddingBottom: '3rem'
                     }}></Image>
 
                   </Box>
@@ -260,6 +263,7 @@ export default function Home() {
                       width:'30rem',
                       height:'30rem',
                       borderRadius: '16px',
+                      paddingBottom: '2.5rem'
                     }}></Image>
                   </Box>
                   <Box sx={{
@@ -267,18 +271,23 @@ export default function Home() {
                     justifyContent: 'center',
                     display: 'flex',
                     flexDirection: 'column',
+                    paddingTop: '2rem'
                   }}>
                   <Heading as="h4"   sx={{
                       fontFamily: 'var(--font-inter)',
                       fontWeight: 900,
+                      fontSize: '1.5vw',
+                      paddingBottom: '1.2rem'
                     } }>Submit a PR</Heading>
                        <Image sx={{
                       width:'30rem',
                       height:'30rem',
                       borderRadius: '16px',
+                      paddingBottom: '2.5rem'
                     }}></Image>
                   </Box>
               </Grid>
+            <Box sx={{height: '100vh'}}>
               <Heading as = "h3" sx={{
                 textAlign: 'left',
                 fontFamily: 'var(--font-inter)',
@@ -295,7 +304,7 @@ export default function Home() {
                 ml: '4vh'
               }}>
                 - Must be a student in high school or below </Text>
-              
+          </Box>
           </Box>
           <Box sx={{
             backgroundColor: '#FFA5A5',
