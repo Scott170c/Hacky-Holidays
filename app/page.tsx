@@ -3,7 +3,7 @@
 
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { keyframes } from '@emotion/react'
-import '@google/model-viewer';
+// import '@google/model-viewer';
 // import Script from 'next/script';
 
  
@@ -19,7 +19,7 @@ import {
 import dynamic from 'next/dynamic';
 
 // const ModelViewer = dynamic(() => import('./ModelViewer'), { ssr: false });
-const ModelViewer = dynamic(() => import('./ModelViewer'), { ssr: false });
+// const ModelViewer = dynamic(() => import('./ModelViewer'), { ssr: false });
 
 const fall = (  rotationDirection: number) => keyframes`
   from {
@@ -115,7 +115,7 @@ export default function Home() {
             // height: '65vh'
           }}
           >
-                        <ModelViewer/>
+                        {/* <ModelViewer/> */}
 {/* 
             <Image 
                 src="https://cloud-1mi3pnd3v-hack-club-bot.vercel.app/0image.png" 
