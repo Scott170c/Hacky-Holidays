@@ -19,7 +19,7 @@ import {
 import dynamic from 'next/dynamic';
 
 // const ModelViewer = dynamic(() => import('./ModelViewer'), { ssr: false });
-import ModelViewer from './ModelViewer.js';
+const ModelViewer = dynamic(() => import('./ModelViewer'), { ssr: false });
 
 const fall = (  rotationDirection: number) => keyframes`
   from {
