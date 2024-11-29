@@ -3,9 +3,9 @@
 
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { keyframes } from '@emotion/react'
-import '@google/model-viewer';
-import Script from 'next/script';
-
+// import '@google/model-viewer';
+// import Script from 'next/script';
+import { useEffect } from 'react';
  
 // import Image from "next/image";
 import {
@@ -19,7 +19,7 @@ import {
 import dynamic from 'next/dynamic';
 
 // const ModelViewer = dynamic(() => import('./ModelViewer'), { ssr: false });
-import ModelViewer from './ModelViewer.js';
+const ModelViewer = dynamic(() => import('./ModelViewer'), { ssr: false });
 
 const fall = (  rotationDirection: number) => keyframes`
   from {
@@ -30,7 +30,11 @@ const fall = (  rotationDirection: number) => keyframes`
   }
 `;
 export default function Home() {
-  
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      import('@google/model-viewer');
+    }
+  }, []);
   return (
   <Grid gap = {0} sx={{
     backgroundImage: 'linear-gradient(to bottom, #25A8FF, #DCF1FF)', 
@@ -115,8 +119,8 @@ export default function Home() {
             // height: '65vh'
           }}
           >
-                        <ModelViewer/>
-{/* 
+        {typeof window !== 'undefined' && <ModelViewer />}
+        {/* 
             <Image 
                 src="https://cloud-1mi3pnd3v-hack-club-bot.vercel.app/0image.png" 
                 alt="Example PCB!" 
