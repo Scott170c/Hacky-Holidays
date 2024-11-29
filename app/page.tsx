@@ -3,7 +3,7 @@
 
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { keyframes } from '@emotion/react'
-import '@google/model-viewer';
+// import '@google/model-viewer';
 // import Script from 'next/script';
 
  
