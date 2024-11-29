@@ -9,14 +9,7 @@
   ],
   "rules": {
     // your custom rules
-    "@typescript-eslint/no-unused-vars": [
-      "warn",
-      {
-        "vars": "all",
-        "varsIgnorePattern": "[A-Z]",
-        "args": "after-used",
-        "ignoreRestSiblings": true
-      }
-    ]
+    "@typescript-eslint/no-unused-vars": "off"
+
   }
 }
