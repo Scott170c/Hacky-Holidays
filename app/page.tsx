@@ -38,7 +38,6 @@ export default function Home() {
   return (
   <Grid gap = {0} sx={{
     backgroundImage: 'linear-gradient(to bottom, #25A8FF, #DCF1FF)', 
-
   }}>   
 
         <Box
@@ -294,33 +293,41 @@ export default function Home() {
               <Heading as = "h3" sx={{
                 textAlign: 'left',
                 fontFamily: 'var(--font-inter)',
+                flexDirection: 'column',
+                display: 'flex',
                 fontWeight: 900,
                 margin: '4vh',
               }}>
                 Requirements:
               </Heading>
-              <Text sx={{
+              <Heading sx={{
                 textAlign: 'left',
                 fontFamily: 'var(--font-inter)',
                 fontWeight: 900,
                 margin: '2vh',
+                // display: 'flex',
+                // flexDirection: 'column',
                 ml: '4vh'
               }}>
-                - Must be a student in high school or below </Text>
-          </Box>
+                - Must be a student in high school or below </Heading>
           </Box>
           <Box sx={{
             backgroundColor: '#FFA5A5',
             height: '250%',
+            position: 'relative',
+            bottom: '0',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
+            // py: '10px',
             justifyContent: 'center',
             fontSize: ['3vw','1.2vw'],
             color: 'white'
           }}>
             Made with ❤️ and ❄️ by Bright Li (@bright li) & Scott Chiang (@Scott)
             </Box>
+          </Box>
+
     </Grid>
   );
 }
