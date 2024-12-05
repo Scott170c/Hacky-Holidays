@@ -40,7 +40,8 @@ export default function Home() {
   return (
   
   <Grid gap = {0} sx={{
-    background: 'linear-gradient(to bottom right, #0099FF, #74C8FF)', 
+    background: 'linear-gradient(to bottom right, rgba(70, 181, 255, 1), rgba(227, 244, 255, 1))', 
+    minHeight: '100vh',
   }}>
 
         <Box
@@ -132,11 +133,33 @@ export default function Home() {
                     paddingRight: '5rem',
                     color: 'white',
                     textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
-                  }}>Design a unique PCB decoration (all art made by you!) from scratch and submit it to the project gallery via pull request in the GitHub repository before [set date]! <br></br>
-                  Once your PR gets approved, you can get your PCB decoration shipped just in time for the holidays!🎄</Heading>
-          <Box>
-            <FAQcard question="What is React?" answer="React is a JavaScript library for building user interfaces." />
-          </Box>
+                  }}>Submissions will be peer-reviewed in the categories of Best Creative Design, Most Technically Impressive, and Spookiest Halloween Theme — no extensive experience required. The top voted 10% of entries per catagory will receive a $100 grant to manufacture their PCB and purchase additional hardware or electronics. Get inspired by Halloween themes such as costumes and animatronic props, and incorporate them into your design.</Heading>
+          <Grid columns = {[1,1,1,3]}gap = {[50,5,20,0]} sx = {{paddingTop: '20px', paddingBottom: '30px', position: 'flex'}}>
+            <FAQcard question="What are the Requirements?" answer="Your PCB must be under 100mm x 100m in size, 
+                                                                  and all parts must come from the parts list.  Since
+                                                                  This is an addition to OnBoard, your project must 
+                                                                  also follow OnBoard Requirements." />
+            <FAQcard question="What are the Requirements?" answer="Your PCB must be under 100mm x 100m in size, 
+                                                                  and all parts must come from the parts list.  Since
+                                                                  This is an addition to OnBoard, your project must 
+                                                                  also follow OnBoard Requirements." />
+            <FAQcard question="What are the Requirements?" answer="Your PCB must be under 100mm x 100m in size, 
+                                                                  and all parts must come from the parts list.  Since
+                                                                  This is an addition to OnBoard, your project must 
+                                                                  also follow OnBoard Requirements." />
+            <FAQcard question="What are the Requirements?" answer="Your PCB must be under 100mm x 100m in size, 
+                                                                  and all parts must come from the parts list.  Since
+                                                                  This is an addition to OnBoard, your project must 
+                                                                  also follow OnBoard Requirements." />
+            <FAQcard question="What are the Requirements?" answer="Your PCB must be under 100mm x 100m in size, 
+                                                                  and all parts must come from the parts list.  Since
+                                                                  This is an addition to OnBoard, your project must 
+                                                                  also follow OnBoard Requirements." />
+            <FAQcard question="What are the Requirements?" answer="Your PCB must be under 100mm x 100m in size, 
+                                                                  and all parts must come from the parts list.  Since
+                                                                  This is an addition to OnBoard, your project must 
+                                                                  also follow OnBoard Requirements." />
+          </Grid>
 
           <Box sx={{
             backgroundColor: '#FFA5A5',

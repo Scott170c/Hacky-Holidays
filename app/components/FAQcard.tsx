@@ -20,21 +20,28 @@ const FAQcard: React.FC<CardProps> = ({ question, answer }) => {
 const styles = {
   card: {
     border: '1px solid #ddd',
-    borderRadius: '8px',
+    borderRadius: '20px',
     padding: '16px',
     margin: '16px',
-    backgroundColor: '#fefefe',
+    backgroundColor: 'rgba(201, 227, 255, 0.73)',
     boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
+    height: '16vw',
+    width: '25vw',
+    border: '5px solid rgba(39, 114, 193, 0.42)',
+    overflow: 'hidden',
   },
   question: {
-    fontSize: '18px',
-    fontWeight: 'bold',
-    color: '#333',
+    fontSize: '2.1rem',
+    fontWeight: 600,
+    color: '#FFFFFF',
+    textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
   },
   answer: {
-    fontSize: '16px',
-    color: '#666',
+    fontSize: '1.1rem',
+    color: '#003180',
     marginTop: '8px',
+    textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
+    fontWeight: 600,
   },
 };
 
