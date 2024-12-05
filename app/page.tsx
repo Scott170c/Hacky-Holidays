@@ -11,11 +11,14 @@ import { useEffect } from 'react';
 import {
   Box,
   Button,
+  Container,
   Image,
   Grid,
   Heading,
   Text,
 } from 'theme-ui';
+import Footer from './components/footer';
+
 import dynamic from 'next/dynamic';
 const Top = dynamic(() => import('./components/top'), { ssr: false });
 import FAQcard from './components/FAQcard';
@@ -38,10 +41,39 @@ export default function Home() {
     }
   }, []);
   return (
-  
+  <Box>
   <Grid gap = {0} sx={{
     background: 'linear-gradient(to bottom right, rgba(70, 181, 255, 1), rgba(227, 244, 255, 1))', 
-    minHeight: '100vh',
+    // background: 'linear-gradient(to bottom right, rgba(70, 181, 255, 1), rgba(227, 244, 255, 1))',
+    // // height: 'auto',
+    // display: 'block',
+    // display: 'flex',
+    // flexDirection: 'column',
+    // height:"100%",
+    // alignItems: 'center',
+    minHeight: '280vh',
+    // background: 'linear-gradient(to bottom right, rgba(70, 181, 255, 1), rgba(227, 244, 255, 1))', 
+    // display: 'grid',
+    // gridTemplateRows: 'auto auto 1fr auto', // Allows more explicit control
+    // minHeight: '100vh',
+  
+  
+    // display: 'flex',
+    // minHeight: '100vh', // Ensure it covers at least the viewport height
+    // padding: '20px',
+    // display: 'flex',
+    // flexDirection: 'column',
+    // alignItems: 'center',
+    // justifyContent: 'flex-start', // Ensure content starts from the top
+
+    // flexDirection: 'column',
+    // alignItems: 'center',
+    // justifyContent: 'flex-start', // Ensure content starts from the top
+
+    // flexDirection: 'column',
+ 
+    // overflow: 'auto',
+    // padding:'20px',
   }}>
 
         <Box
@@ -134,7 +166,7 @@ export default function Home() {
                     color: 'white',
                     textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
                   }}>Submissions will be peer-reviewed in the categories of Best Creative Design, Most Technically Impressive, and Spookiest Halloween Theme — no extensive experience required. The top voted 10% of entries per catagory will receive a $100 grant to manufacture their PCB and purchase additional hardware or electronics. Get inspired by Halloween themes such as costumes and animatronic props, and incorporate them into your design.</Heading>
-          <Grid columns = {[1,1,1,3]}gap = {[50,5,20,0]} sx = {{paddingTop: '20px', paddingBottom: '30px', position: 'flex'}}>
+          <Grid columns = {[1,1,1,3]}gap = {[50,5,20,0]} sx = {{paddingTop: '20px', paddingBottom: '30px', position: 'relative'}}>
             <FAQcard question="What are the Requirements?" answer="Your PCB must be under 100mm x 100m in size, 
                                                                   and all parts must come from the parts list.  Since
                                                                   This is an addition to OnBoard, your project must 
@@ -160,25 +192,10 @@ export default function Home() {
                                                                   This is an addition to OnBoard, your project must 
                                                                   also follow OnBoard Requirements." />
           </Grid>
-
-          <Box sx={{
-            backgroundColor: '#FFA5A5',
-            height: '8vh',
-            width: '100%',
-            position: 'relative',
-            bottom: '0',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            fontWeight: '500px',
-            // py: '10px',
-            justifyContent: 'center',
-            fontSize: '2.5vh',
-            color: 'white'
-          }}>
-            Made with ❤️ by @bright li & @Scott
-            </Box>
           </Box>
+          
     </Grid>
+    <Footer></Footer>
+    </Box>
   );
 }
