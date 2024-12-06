@@ -31,17 +31,19 @@ const styles = {
     overflow: 'hidden',
   },
   question: {
-    fontSize: '2.1rem',
-    fontWeight: 600,
+    fontSize: '2.8rem',
+    fontWeight: 790,
     color: '#FFFFFF',
     textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
+    paddingLeft: '10px',
   },
   answer: {
-    fontSize: '1.1rem',
+    fontSize: '1.5rem',
     color: '#003180',
     marginTop: '8px',
     textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
     fontWeight: 600,
+    paddingLeft: '20px'
   },
 };
 

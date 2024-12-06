@@ -2,7 +2,7 @@
 import { keyframes } from '@emotion/react'
 import GuideMD from './guideMD.mdx'
 import { MDXProvider } from '@mdx-js/react'
-
+import components from '../components/mdx'
 const fadeIn = keyframes({ from: { opacity: 0 }, to: { opacity: 1 } })
 import { Box } from 'theme-ui'
 // const components = {
@@ -15,10 +15,12 @@ import { Box } from 'theme-ui'
 export default function guide() {
   return (
     <Box sx = {{
-      fontFamily: 'var(--font-inter)', 
+      fontFamily: 'var(--font-inter)',
+      color: 'black',
+      listStyleType: 'decimal',
     }}>
           <MDXProvider >
-      <GuideMD />
+      <GuideMD components={components}/>
     </MDXProvider>  
     </Box>
 );

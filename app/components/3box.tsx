@@ -18,7 +18,7 @@ const Threebox = () => {
             flexDirection: 'row',
             alignItems: 'center',
             backgroundColor: 'rgba(0, 0, 0, 0.31)',
-            borderRadius: '20px',
+            borderRadius: '25px',
             mx: '32px',
             mb: '5vh',
             paddingBottom: '2vh',
