@@ -2,7 +2,7 @@
 
 
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { keyframes } from '@emotion/react'
+import { keyframes } from '@emotion/react';
 // import '@google/model-viewer';
 // import Script from 'next/script';
 import { useEffect } from 'react';
@@ -29,6 +29,9 @@ const fall = (  rotationDirection: number) => keyframes`
     transform: translateY(4700%) rotate(${rotationDirection * 360}deg);
   }
 `;
+
+const faqItems = {question: 'What is Next.js?', answer: 'Next.js is a React framework for production.' };
+
 export default function Home() {
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -37,7 +40,7 @@ export default function Home() {
   }, []);
   return (
   <Grid gap = {0} sx={{
-    backgroundImage: 'linear-gradient(to bottom, #25A8FF, #DCF1FF)', 
+    backgroundImage: 'linear-gradient(#0099FF, #A5DBFF)', 
   }}>   
 
         <Box
@@ -173,13 +176,19 @@ export default function Home() {
               fontSize: '1.5rem',
               fontWeight: 900,
               color: 'white',
-              bg: '#f90b0b',
+              backgroundImage: 'linear-gradient(to right, #eb3941, #f15e64, #e14e53, #e2373f);',
               width: 'fit-content',
-              borderRadius: '1rem',
+              borderRadius: '3rem',
               padding: '1rem 2rem',
-              mt: '1rem'
+              cursor: 'pointer',
+              mt: '1rem',
+              backgroundSize: '300% 100%',
+              transition: 'background 0.3s ease-in-out',
+              '&:hover': {
+              animation: `background-position: 100% 0; box-shadow: 0 5px 15px rgba(242, 97, 103, .4)`,
+             },
             }}>
-                <b>Register Now!</b>
+                <b>Come Build with Us ➜</b>
             </Button>
 
 
@@ -206,22 +215,22 @@ export default function Home() {
               <Heading as="h3"   sx={{ 
                     margin: 20,
                     fontFamily: 'var(--font-inter)', 
-                    fontSize: '2rem', 
+                    fontSize: '1.55vw', 
                     fontWeight:800,
                     paddingTop: '0.5rem',
                     paddingLeft: '5rem',
                     paddingRight: '5rem',
                     color: 'white'
-                  }}>Design a unique PCB decoration (all art made by you!) from scratch and submit it to the project gallery via a pull request in the GitHub repository before [set date]! <br></br>
+                  }}>Design a unique PCB decoration from scratch and submit it to the project gallery via a pull request in the GitHub repository before [set date]! <br></br>
                   Once your PR gets approved, you can get your PCB decoration shipped just in time for the holidays!🎄</Heading>
-                <Grid columns= {[1,1,1,3]}gap = {[50,5,20,50]} sx={{
+                <Grid columns= {[1,1,1, 3]}gap = {[50,5,20,50]} sx={{
                 mt: '5vh',
                 width: 'auto',
                 textAlign: 'center',
                 justifyContent: 'center',
                 flexDirection: 'row',
                 alignItems: 'center',
-                backgroundColor: 'rgba(255, 255, 255, 40%)',
+                backgroundColor: 'rgba(255, 255, 255, 20%)',
                 borderRadius: '32px',
                 mx: '32px',
                 paddingBottom: '2vh',
@@ -232,19 +241,19 @@ export default function Home() {
                     justifyContent: 'center',
                     display: 'flex',
                     flexDirection: 'column',
-                    paddingTop: '2rem'
+                    paddingTop: '1.7rem'
                   }}>
                     <Heading as="h4"   sx={{
                       fontFamily: 'var(--font-inter)',
                       fontWeight: 900,
                       fontSize: '1.5vw',
                       paddingBottom: '1.2rem'
-                    } }>Design a Decoration</Heading>
+                    } }>Design</Heading>
                     <Image sx={{
-                      width:'30rem',
+                      width:'28rem',
                       height:'30rem',
                       borderRadius: '16px',
-                      paddingBottom: '3rem'
+                      paddingBottom: '3rem',
                     }}></Image>
 
                   </Box>
@@ -253,16 +262,16 @@ export default function Home() {
                     justifyContent: 'center',
                     display: 'flex',
                     flexDirection: 'column',
-                    paddingTop: '2rem'
+                    paddingTop: '1.7rem'
                   }}>
                          <Heading as="h4"   sx={{
                       fontFamily: 'var(--font-inter)',
                       fontWeight: 900,
                       fontSize: '1.5vw',
                       paddingBottom: '1.2rem'
-                    } }>Code Firmware</Heading>
+                    } }>Code</Heading>
                        <Image sx={{
-                      width:'30rem',
+                      width:'28rem',
                       height:'30rem',
                       borderRadius: '16px',
                       paddingBottom: '2.5rem'
@@ -273,16 +282,16 @@ export default function Home() {
                     justifyContent: 'center',
                     display: 'flex',
                     flexDirection: 'column',
-                    paddingTop: '2rem'
+                    paddingTop: '1.7rem'
                   }}>
                   <Heading as="h4"   sx={{
                       fontFamily: 'var(--font-inter)',
                       fontWeight: 900,
                       fontSize: '1.5vw',
                       paddingBottom: '1.2rem'
-                    } }>Submit a PR</Heading>
+                    } }>Submit</Heading>
                        <Image sx={{
-                      width:'30rem',
+                      width:'28rem',
                       height:'30rem',
                       borderRadius: '16px',
                       paddingBottom: '2.5rem'
@@ -297,23 +306,29 @@ export default function Home() {
                 display: 'flex',
                 fontWeight: 900,
                 margin: '4vh',
+                paddingLeft: '-10vh'
               }}>
-                Requirements:
               </Heading>
-              <Heading sx={{
+
+                <Heading sx={{
                 textAlign: 'left',
                 fontFamily: 'var(--font-inter)',
                 fontWeight: 900,
                 margin: '2vh',
                 // display: 'flex',
                 // flexDirection: 'column',
-                ml: '4vh'
+                ml: '4vh',
+                color: 'black',
+                fontSize: '1.75vw',
+                overflow: 'hidden'
               }}>
-                - Must be a student in high school or below </Heading>
+                FAQ:
+              </Heading>
+              <Box sx={{height: '5vw', width: '10vw',}}>Hello World</Box>
           </Box>
           <Box sx={{
             backgroundColor: '#FFA5A5',
-            height: '250%',
+            height: '70%',
             position: 'relative',
             bottom: '0',
             display: 'flex',
@@ -327,7 +342,6 @@ export default function Home() {
             Made with ❤️ and ❄️ by Bright Li (@bright li) & Scott Chiang (@Scott)
             </Box>
           </Box>
-
     </Grid>
   );
 }
