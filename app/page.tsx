@@ -6,18 +6,23 @@ import { keyframes } from '@emotion/react';
 // import '@google/model-viewer';
 // import Script from 'next/script';
 import { useEffect } from 'react';
- 
+//  import { tipitytopity } from './components/top'
 // import Image from "next/image";
 import {
   Box,
   Button,
+  Container,
   Image,
   Grid,
   Heading,
   Text,
 } from 'theme-ui';
-import dynamic from 'next/dynamic';
+import Footer from './components/footer';
 
+import dynamic from 'next/dynamic';
+const Top = dynamic(() => import('./components/top'), { ssr: false });
+import FAQcard from './components/FAQcard';
+const ThreeGrid = dynamic(() => import('./components/3box'), { ssr: false });
 // const ModelViewer = dynamic(() => import('./ModelViewer'), { ssr: false });
 const ModelViewer = dynamic(() => import('./ModelViewer'), { ssr: false });
 
@@ -39,9 +44,40 @@ export default function Home() {
     }
   }, []);
   return (
+  <Box>
   <Grid gap = {0} sx={{
-    backgroundImage: 'linear-gradient(#0099FF, #A5DBFF)', 
-  }}>   
+    background: 'linear-gradient(to bottom right, rgba(70, 181, 255, 1), rgba(227, 244, 255, 1))', 
+    // background: 'linear-gradient(to bottom right, rgba(70, 181, 255, 1), rgba(227, 244, 255, 1))',
+    // // height: 'auto',
+    // display: 'block',
+    // display: 'flex',
+    // flexDirection: 'column',
+    // height:"100%",
+    // alignItems: 'center',
+    minHeight: '280vh',
+    // background: 'linear-gradient(to bottom right, rgba(70, 181, 255, 1), rgba(227, 244, 255, 1))', 
+    // display: 'grid',
+    // gridTemplateRows: 'auto auto 1fr auto', // Allows more explicit control
+    // minHeight: '100vh',
+  
+  
+    // display: 'flex',
+    // minHeight: '100vh', // Ensure it covers at least the viewport height
+    // padding: '20px',
+    // display: 'flex',
+    // flexDirection: 'column',
+    // alignItems: 'center',
+    // justifyContent: 'flex-start', // Ensure content starts from the top
+
+    // flexDirection: 'column',
+    // alignItems: 'center',
+    // justifyContent: 'flex-start', // Ensure content starts from the top
+
+    // flexDirection: 'column',
+ 
+    // overflow: 'auto',
+    // padding:'20px',
+  }}>
 
         <Box
         sx={{
@@ -65,19 +101,7 @@ export default function Home() {
 
        
     
-        {/* {Array.from({ length: 50 }).map((_, index) => (
-          <span
-            key={index}
-            className="snowflake"
-            style={{
-              left: `${Math.random() * 100}vw`,
-              fontSize: `${Math.random() * 20 + 10}px`,
-              animationDelay: `${Math.random() * 10}s`,
-            }}
-          >
-            ❄
-          </span>
-        ))} */}
+        
         {Array.from({ length: 50 }).map((_, index) => {
           const randomRotationDirection = Math.random() > 0.5 ? 1 : -1;
           const randomSpeed = Math.random() * 10 + 5;
@@ -103,106 +127,15 @@ export default function Home() {
           </Text>)
         })}
       
-            
-          <Box
-          sx={{
-            display: 'flex',
-            flexDirection:['column','column', 'row'],
-            alignItems: 'center',
-            justifyContent: 'center',
-            gap: '1rem',
-            padding: '1rem',
-            paddingRight: '3rem',
-            width: '100%',
-            margin: 'auto',
-
-            mt: '15vh',
-            textAlign: 'center',
-            // height: '65vh'
-          }}
-          >
-        {typeof window !== 'undefined' && <ModelViewer />}
-        {/* 
-            <Image 
-                src="https://cloud-1mi3pnd3v-hack-club-bot.vercel.app/0image.png" 
-                alt="Example PCB!" 
-                style={{ width: '35%', height: '34%' }}
-                sx={{
-                  width: '300px',
-                  height: '200px',
-                  // borderRadius: '16px',
-                  // boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)',
-                  '&:hover': {
-                    transform: 'scale(1.1)',
-                    transition: 'transform 0.3s ease-in-out',
-                  },
-                }}
-            /> */}
-            <Box
-            sx={{
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'left',
-              // justifyContent: 'left',
-              ml: ['0vw','2vw'],
-              // mt: ['1%','12%'],
-              maxWidth: '100%',
-              textAlign: 'center'
-            }}
-            >
-            <Heading as="h1" variant="styles.h1" 
-                  sx={{ 
-                    fontFamily: 'var(--font-inter)', 
-                    fontSize: '7rem', 
-                    fontWeight:900,
-                    textAlign: ['center','center','left']
-
-
-                  }}>
-              Hacky Holidays!
-            </Heading>
-            <Heading as="h2" variant="styles.h1" 
-                  sx={{ 
-                    fontFamily: 'var(--font-inter)', 
-                    fontSize: '2rem', 
-                    fontWeight:900 
-                  }}>
-              Design a PCB holiday decoration <u><a style={{color:"#5297FF"}} href="https://google.com">this winter</a></u>, get a PCB grant!
-            </Heading>
-            <Button
-            sx={{
-              mx: ['auto',0],
-              fontFamily: 'var(--font-inter)',
-              fontSize: '1.5rem',
-              fontWeight: 900,
-              color: 'white',
-              backgroundImage: 'linear-gradient(to right, #eb3941, #f15e64, #e14e53, #e2373f);',
-              width: 'fit-content',
-              borderRadius: '3rem',
-              padding: '1rem 2rem',
-              cursor: 'pointer',
-              mt: '1rem',
-              backgroundSize: '300% 100%',
-              transition: 'background 0.3s ease-in-out',
-              '&:hover': {
-              animation: `background-position: 100% 0; box-shadow: 0 5px 15px rgba(242, 97, 103, .4)`,
-             },
-            }}>
-                <b>Come Build with Us ➜</b>
-            </Button>
-
-
-            </Box>
+            <Top />
        
-          </Box>
-     
 
           <Box //section 2
           sx={{
             display: 'flex',
             flexDirection: 'column',
-            // alignItems: 'center',
-            // justifyContent: 'center',
+            alignItems: 'center',
+            justifyContent: 'center',
             // backgroundColor: 'white',
             color: 'black',
             width: '100%',
@@ -218,130 +151,53 @@ export default function Home() {
                     fontSize: '1.55vw', 
                     fontWeight:800,
                     paddingTop: '0.5rem',
-                    paddingLeft: '5rem',
+                    paddingLeft: '5.5rem',
                     paddingRight: '5rem',
+                    textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
+
                     color: 'white'
-                  }}>Design a unique PCB decoration from scratch and submit it to the project gallery via a pull request in the GitHub repository before [set date]! <br></br>
+                  }}>Design a unique PCB decoration (all art made by you!) from scratch and submit it to the project gallery via a pull request in the GitHub repository before [set date]! <br></br>
                   Once your PR gets approved, you can get your PCB decoration shipped just in time for the holidays!🎄</Heading>
-                <Grid columns= {[1,1,1, 3]}gap = {[50,5,20,50]} sx={{
-                mt: '5vh',
-                width: 'auto',
-                textAlign: 'center',
-                justifyContent: 'center',
-                flexDirection: 'row',
-                alignItems: 'center',
-                backgroundColor: 'rgba(255, 255, 255, 20%)',
-                borderRadius: '32px',
-                mx: '32px',
-                paddingBottom: '2vh',
-                paddingTop: '2vh',
-              }}>
-                  <Box sx={{
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    paddingTop: '1.7rem'
-                  }}>
-                    <Heading as="h4"   sx={{
-                      fontFamily: 'var(--font-inter)',
-                      fontWeight: 900,
-                      fontSize: '1.5vw',
-                      paddingBottom: '1.2rem'
-                    } }>Design</Heading>
-                    <Image sx={{
-                      width:'28rem',
-                      height:'30rem',
-                      borderRadius: '16px',
-                      paddingBottom: '3rem',
-                    }}></Image>
-
-                  </Box>
-                  <Box sx={{
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    paddingTop: '1.7rem'
-                  }}>
-                         <Heading as="h4"   sx={{
-                      fontFamily: 'var(--font-inter)',
-                      fontWeight: 900,
-                      fontSize: '1.5vw',
-                      paddingBottom: '1.2rem'
-                    } }>Code</Heading>
-                       <Image sx={{
-                      width:'28rem',
-                      height:'30rem',
-                      borderRadius: '16px',
-                      paddingBottom: '2.5rem'
-                    }}></Image>
-                  </Box>
-                  <Box sx={{
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    paddingTop: '1.7rem'
-                  }}>
-                  <Heading as="h4"   sx={{
-                      fontFamily: 'var(--font-inter)',
-                      fontWeight: 900,
-                      fontSize: '1.5vw',
-                      paddingBottom: '1.2rem'
-                    } }>Submit</Heading>
-                       <Image sx={{
-                      width:'28rem',
-                      height:'30rem',
-                      borderRadius: '16px',
-                      paddingBottom: '2.5rem'
-                    }}></Image>
-                  </Box>
-              </Grid>
-            <Box sx={{height: '100vh'}}>
-              <Heading as = "h3" sx={{
-                textAlign: 'left',
-                fontFamily: 'var(--font-inter)',
-                flexDirection: 'column',
-                display: 'flex',
-                fontWeight: 900,
-                margin: '4vh',
-                paddingLeft: '-10vh'
-              }}>
-              </Heading>
-
-                <Heading sx={{
-                textAlign: 'left',
-                fontFamily: 'var(--font-inter)',
-                fontWeight: 900,
-                margin: '2vh',
-                // display: 'flex',
-                // flexDirection: 'column',
-                ml: '4vh',
-                color: 'black',
-                fontSize: '1.75vw',
-                overflow: 'hidden'
-              }}>
-                FAQ:
-              </Heading>
-              <Box sx={{height: '5vw', width: '10vw',}}>Hello World</Box>
-          </Box>
-          <Box sx={{
-            backgroundColor: '#FFA5A5',
-            height: '70%',
-            position: 'relative',
-            bottom: '0',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            // py: '10px',
-            justifyContent: 'center',
-            fontSize: ['3vw','1.2vw'],
-            color: 'white'
-          }}>
-            Made with ❤️ and ❄️ by Bright Li (@bright li) & Scott Chiang (@Scott)
-            </Box>
-          </Box>
+          
+         
+                  <ThreeGrid/>
+              <Heading as="h3"   sx={{ 
+                    margin: 20,
+                    fontFamily: 'var(--font-inter)', 
+                    fontWeight:800,
+                    paddingTop: '0.5rem',
+                    paddingRight: '5rem',
+                    color: 'white',
+                    textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
+                  }}>Submissions will be peer-reviewed in the categories of Best Creative Design, Most Technically Impressive, and Spookiest Halloween Theme — no extensive experience required. The top voted 10% of entries per catagory will receive a $100 grant to manufacture their PCB and purchase additional hardware or electronics. Get inspired by Halloween themes such as costumes and animatronic props, and incorporate them into your design.</Heading>
+          <Grid columns = {[1,1,1,3]}gap = {[50,5,20,0]} sx = {{paddingTop: '20px', paddingBottom: '30px', position: 'relative'}}>
+            <FAQcard question="What are the Requirements?" answer="Your PCB must be under 100mm x 100m in size, 
+                                                                  and all parts must come from the parts list.  Since
+                                                                  This is an addition to OnBoard, your project must 
+                                                                  also follow OnBoard Requirements." />
+            <FAQcard question="What are the Requirements?" answer="Your PCB must be under 100mm x 100m in size, 
+                                                                  and all parts must come from the parts list.  Since
+                                                                  This is an addition to OnBoard, your project must 
+                                                                  also follow OnBoard Requirements." />
+            <FAQcard question="What are the Requirements?" answer="Your PCB must be under 100mm x 100m in size, 
+                                                                  and all parts must come from the parts list.  Since
+                                                                  This is an addition to OnBoard, your project must 
+                                                                  also follow OnBoard Requirements." />
+            <FAQcard question="What are the Requirements?" answer="Your PCB must be under 100mm x 100m in size, 
+                                                                  and all parts must come from the parts list.  Since
+                                                                  This is an addition to OnBoard, your project must 
+                                                                  also follow OnBoard Requirements." />
+            <FAQcard question="What are the Requirements?" answer="Your PCB must be under 100mm x 100m in size, 
+                                                                  and all parts must come from the parts list.  Since
+                                                                  This is an addition to OnBoard, your project must 
+                                                                  also follow OnBoard Requirements." />
+            <FAQcard question="What are the Requirements?" answer="Your PCB must be under 100mm x 100m in size, 
+                                                                  and all parts must come from the parts list.  Since
+                                                                  This is an addition to OnBoard, your project must 
+                                                                  also follow OnBoard Requirements." />
+          </Grid>          </Box>
     </Grid>
+    <Footer></Footer>
+    </Box>
   );
 }
