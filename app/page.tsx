@@ -171,7 +171,7 @@ export default function Home() {
                     paddingRight: '5rem',
                     textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
                     color: 'white',
-                  }}>Submissions will be peer-reviewed in the categories of Best Creative Design, Most Technically Impressive, and Spookiest Halloween Theme — no extensive experience required. The top voted 10% of entries per catagory will receive a $100 grant to manufacture their PCB and purchase additional hardware or electronics. Get inspired by Halloween themes such as costumes and animatronic props, and incorporate them into your design. <br></br><br></br> 
+                  }}>At the end, Submissions will be peer-reviewed and voted for the top 3. The top 3 will be re-made, and can be used to give out as gifts!<br></br><br></br> 
                   <Box sx={{fontsize: '5vw'}}>FAQ:</Box></Heading>
           <Grid columns = {[1,1,1,3]}gap = {[50,5,20,0]} sx = {{paddingTop: '1.5vh', position: 'relative'}}>
             <FAQcard question="What are the Requirements?" answer="Your PCB must be under 100mm x 100m in size, 
