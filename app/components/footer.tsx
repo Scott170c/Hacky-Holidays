@@ -18,7 +18,6 @@ import {
             display: 'flex',
             //flexDirection: 'column',
             alignItems: 'center',
-            fontWeight: '500px',
             // py: '10px',
             justifyContent: 'center',
             fontSize: '2.7vh',
