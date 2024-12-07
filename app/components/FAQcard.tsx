@@ -19,7 +19,6 @@ const FAQcard: React.FC<CardProps> = ({ question, answer }) => {
 // Inline styles for the component
 const styles = {
   card: {
-    border: '1px solid #ddd',
     borderRadius: '20px',
     padding: '16px',
     margin: '16px',
