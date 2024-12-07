@@ -26,6 +26,8 @@ import {
           mt: '15vh',
           textAlign: 'center',
           // height: '65vh'
+          backgroundImage: 'https://cloud-n3hpb6nr4-hack-club-bot.vercel.app/0image.png',
+          height: '100vh'
         }}
         >
       {typeof window !== 'undefined' && <ModelViewer />}
@@ -60,18 +62,18 @@ import {
           <Heading as="h1" variant="styles.h1" 
                 sx={{ 
                   fontFamily: 'var(--font-inter)', 
-                  fontSize: '7rem', 
-                  fontWeight:900,
+                  fontSize: ['5rem', '6.5rem'], 
+                  fontWeight:800,
                   textAlign: ['center','center','left'],
                   textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' 
                 }}>
-            Hacky Holidays
+            Hacky Holidays!
           </Heading>
           <Heading as="h2" variant="styles.h1" 
                 sx={{ 
                   fontFamily: 'var(--font-inter)', 
-                  fontSize: '2rem', 
-                  fontWeight:900,
+                  fontSize: ['1.5rem','1.9rem'], 
+                  fontWeight:800,
                   textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' 
                 }}>
             Design a PCB holiday decoration <u><a style={{color:"#5297FF"}} href="https://google.com">this winter</a></u>, get a PCB grant!
@@ -80,7 +82,7 @@ import {
           sx={{
             mx: ['auto',0],
             fontFamily: 'var(--font-inter)',
-            fontSize: '1.5rem',
+            fontSize: '1.2rem',
             fontWeight: 900,
             color: 'white',
             bg: '#f90b0b',
@@ -89,7 +91,7 @@ import {
             padding: '1rem 2rem',
             mt: '1rem'
           }}>
-              <b>Register Now!</b>
+              <b>&nbsp;Learn to Make a Decoration &nbsp; ➜</b>
           </Button>
 
 

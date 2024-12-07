@@ -54,7 +54,7 @@ export default function Home() {
     // flexDirection: 'column',
     // height:"100%",
     // alignItems: 'center',
-    minHeight: '310vh',
+    minHeight: ['400vh', '275vh'],
     // background: 'linear-gradient(to bottom right, rgba(70, 181, 255, 1), rgba(227, 244, 255, 1))', 
     // display: 'grid',
     // gridTemplateRows: 'auto auto 1fr auto', // Allows more explicit control
@@ -150,14 +150,14 @@ export default function Home() {
                     fontFamily: 'var(--font-inter)', 
                     fontSize: '1.55vw', 
                     fontWeight:800,
-                    // paddingTop: '0rem',
+                    paddingTop: '1rem',
                     paddingLeft: '5.5rem',
                     paddingRight: '5rem',
                     textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
 
                     color: 'white'
-                  }}>Want a cool christmas decoration? A cool gift for someone you know? Design a unique PCB decoration (all art made by you!) from scratch and submit it to the project gallery via a pull request in the GitHub repository before [set date]! <br></br>
-                  Once your PR gets approved, you can get your PCB decoration shipped just in time for the holidays!🎄</Heading>
+                  }}>Want a cool christmas decoration? A cool gift for someone you know? Design a unique PCB decoration (all art made by you!) from scratch and submit it to the project gallery via a pull request in the GitHub repository before [set date]!
+                  Once your PR gets approved, you can get your PCB decoration shipped just in time for the holidays!🎄 It is as simple as:</Heading>
           
          
                   <ThreeGrid/>
@@ -172,33 +172,22 @@ export default function Home() {
                     textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
                     color: 'white',
                   }}>At the end, Submissions will be peer-reviewed and voted for the top 3. The top 3 will be re-made, and can be used to give out as gifts!<br></br><br></br> 
-                  <Box sx={{fontsize: '5vw'}}>FAQ:</Box></Heading>
+          <Box sx={{fontsize: '5vw'}}>FAQ:</Box></Heading>
           <Grid columns = {[1,1,1,3]}gap = {[50,5,20,0]} sx = {{paddingTop: '1.5vh', position: 'relative'}}>
             <FAQcard question="What are the Requirements?" answer="Your PCB must be under 100mm x 100m in size, 
                                                                   and all parts must come from the parts list.  Since
                                                                   This is an addition to OnBoard, your project must 
                                                                   also follow OnBoard Requirements." />
-            <FAQcard question="What are the Requirements?" answer="Your PCB must be under 100mm x 100m in size, 
-                                                                  and all parts must come from the parts list.  Since
-                                                                  This is an addition to OnBoard, your project must 
-                                                                  also follow OnBoard Requirements." />
-            <FAQcard question="What are the Requirements?" answer="Your PCB must be under 100mm x 100m in size, 
-                                                                  and all parts must come from the parts list.  Since
-                                                                  This is an addition to OnBoard, your project must 
-                                                                  also follow OnBoard Requirements." />
-            <FAQcard question="What are the Requirements?" answer="Your PCB must be under 100mm x 100m in size, 
-                                                                  and all parts must come from the parts list.  Since
-                                                                  This is an addition to OnBoard, your project must 
-                                                                  also follow OnBoard Requirements." />
-            <FAQcard question="What are the Requirements?" answer="Your PCB must be under 100mm x 100m in size, 
-                                                                  and all parts must come from the parts list.  Since
-                                                                  This is an addition to OnBoard, your project must 
-                                                                  also follow OnBoard Requirements." />
-            <FAQcard question="What are the Requirements?" answer="Your PCB must be under 100mm x 100m in size, 
-                                                                  and all parts must come from the parts list.  Since
-                                                                  This is an addition to OnBoard, your project must 
-                                                                  also follow OnBoard Requirements." />
-          </Grid>          </Box>
+            <FAQcard question="When are Submission deadlines?" answer="The deadline to submit is ___, but if we get higher demand we will extend it. If you want to get your decoration in time for Christmas it is best to get it done before the ___!" />
+            <FAQcard question="What about the OnBoard Grant?" answer="You can still apply for the OnBoard grant, but you cannot receive two grants for the same PCB design. Your new PCB must be significantly different, offering a chance to improve your previous design if you've already used your grant." />
+          </Grid><Heading as="h2" variant="styles.h1" 
+                sx={{ 
+                  fontFamily: 'var(--font-inter)', 
+                  fontSize: '1.9rem', 
+                  fontWeight:800,
+                  textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
+                  color: 'white'
+                }}>Any more questions? Ask in <a style={{color: 'rgba(90, 142, 248, 1)'}} href="https://hackclub.slack.com/archives/C083SK3G5D3">#hacky-holidays</a>!</Heading></Box>
     </Grid>
     <Footer></Footer>
     </Box>

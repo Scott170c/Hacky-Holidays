@@ -18,11 +18,12 @@ const Threebox = () => {
             flexDirection: 'row',
             alignItems: 'center',
             backgroundColor: 'rgba(0, 0, 0, 0.31)',
-            borderRadius: '25px',
+            borderRadius: '1rem',
             mx: '32px',
             mb: '5vh',
             paddingBottom: '2vh',
             paddingTop: '2vh',
+            
             
           }}>
               <Box sx={{
@@ -41,12 +42,13 @@ const Threebox = () => {
                   paddingBottom: '1.2rem',
                   color: 'white',
                   textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' 
-                } }>Build</Heading>
+                } }>Design a PCB</Heading>
                 <Image sx={{
                   width:'27vw',
                   height: '28vw',
                   borderRadius: '20px',
                   paddingBottom: '2rem',
+                  fill: 'true'
                 }}
                 src = "https://cloud-qonvrpxwd-hack-club-bot.vercel.app/0image.png"
                 ></Image>
@@ -68,7 +70,7 @@ const Threebox = () => {
                   fontSize: '1.5vw',
                   color: 'white',
                   paddingBottom: '1.2rem'
-                } }>Design</Heading>
+                } }>Design Art</Heading>
                    <Image sx={{
                   width:'27vw',
                   height:'28vw',
@@ -92,7 +94,7 @@ const Threebox = () => {
                   paddingBottom: '1.2rem',
                   color: 'white',
                   textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' 
-                } }>Code</Heading>
+                } }>Create Firmware</Heading>
                    <Image sx={{
                   width:'27vw',
                   height:'28vw',
