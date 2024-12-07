@@ -46,7 +46,7 @@ export default function Home() {
   return (
   <Box>
   <Grid gap = {0} sx={{
-    background: 'linear-gradient(to bottom right, rgba(70, 181, 255, 1), rgba(227, 244, 255, 1))', 
+    background: 'linear-gradient(180deg, rgba(0,153,255,1) 0%, rgba(130,205,255,1) 100%);', 
     // background: 'linear-gradient(to bottom right, rgba(70, 181, 255, 1), rgba(227, 244, 255, 1))',
     // // height: 'auto',
     // display: 'block',
@@ -156,8 +156,8 @@ export default function Home() {
                     textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
 
                     color: 'white'
-                  }}>Want a cool christmas decoration? A cool gift for someone you know? Design a unique PCB decoration (all art made by you!) from scratch and submit it to the project gallery via a pull request in the GitHub repository before [set date]!
-                  Once your PR gets approved, you can get your PCB decoration shipped just in time for the holidays!🎄 It is as simple as:</Heading>
+                  }}>Want a cool christmas decoration? A cool gift for someone you know? Design a unique PCB decoration from scratch and submit it to the project gallery before the 30th!
+                  Once your PR gets approved, you can get your PCB decoration shipped just in time for the holidays!🎄</Heading>
           
          
                   <ThreeGrid/>
@@ -178,8 +178,8 @@ export default function Home() {
                                                                   and all parts must come from the parts list.  Since
                                                                   This is an addition to OnBoard, your project must 
                                                                   also follow OnBoard Requirements." />
-            <FAQcard question="When are Submission deadlines?" answer="The deadline to submit is ___, but if we get higher demand we will extend it. If you want to get your decoration in time for Christmas it is best to get it done before the ___!" />
-            <FAQcard question="What about the OnBoard Grant?" answer="You can still apply for the OnBoard grant, but you cannot receive two grants for the same PCB design. Your new PCB must be significantly different, offering a chance to improve your previous design if you've already used your grant." />
+            <FAQcard question="When are Submission deadlines?" answer="The deadline to submit is the 30th, but if we get higher demand there is a possibility to extend it. If you want to get your decoration in time for Christmas it is best to get it done before the 15th!" />
+            <FAQcard question="What about the OnBoard Grant?" answer="You can still apply for the OnBoard grant, but you cannot receive two grants for the same PCB design. Your new PCB must be a different design or a significant change to one you made for this." />
           </Grid><Heading as="h2" variant="styles.h1" 
                 sx={{ 
                   fontFamily: 'var(--font-inter)', 

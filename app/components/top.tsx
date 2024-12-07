@@ -76,7 +76,7 @@ import {
                   fontWeight:800,
                   textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' 
                 }}>
-            Design a PCB holiday decoration <u><a style={{color:"#5297FF"}} href="https://google.com">this winter</a></u>, get a PCB grant!
+            Design a PCB holiday decoration this winter, get one shipped!
           </Heading>
           <Button
           sx={{
