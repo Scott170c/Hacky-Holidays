@@ -19,7 +19,6 @@ import {
           alignItems: 'center',
           justifyContent: 'center',
           gap: '1rem',
-          padding: '1rem',
           paddingRight: '3rem',
           width: '100%',
           margin: 'auto',

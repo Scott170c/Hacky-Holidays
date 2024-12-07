@@ -54,7 +54,7 @@ export default function Home() {
     // flexDirection: 'column',
     // height:"100%",
     // alignItems: 'center',
-    minHeight: '280vh',
+    minHeight: '310vh',
     // background: 'linear-gradient(to bottom right, rgba(70, 181, 255, 1), rgba(227, 244, 255, 1))', 
     // display: 'grid',
     // gridTemplateRows: 'auto auto 1fr auto', // Allows more explicit control
@@ -150,13 +150,13 @@ export default function Home() {
                     fontFamily: 'var(--font-inter)', 
                     fontSize: '1.55vw', 
                     fontWeight:800,
-                    paddingTop: '0.5rem',
+                    // paddingTop: '0rem',
                     paddingLeft: '5.5rem',
                     paddingRight: '5rem',
                     textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
 
                     color: 'white'
-                  }}>Design a unique PCB decoration (all art made by you!) from scratch and submit it to the project gallery via a pull request in the GitHub repository before [set date]! <br></br>
+                  }}>Want a cool christmas decoration? A cool gift for someone you know? Design a unique PCB decoration (all art made by you!) from scratch and submit it to the project gallery via a pull request in the GitHub repository before [set date]! <br></br>
                   Once your PR gets approved, you can get your PCB decoration shipped just in time for the holidays!🎄</Heading>
           
          
