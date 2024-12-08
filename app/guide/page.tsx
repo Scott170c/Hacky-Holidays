@@ -22,6 +22,7 @@ export default function guide() {
       paddingBottom: '20px',
       minHeight: '100vh',
     }}>
+    <link rel="icon" href = "https://assets.hackclub.com/icon-rounded.svg"></link>
     <Box sx = {{
       fontFamily: 'var(--font-inter)',
       minHeight: '100vh',

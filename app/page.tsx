@@ -45,6 +45,7 @@ export default function Home() {
   }, []);
   return (
   <Box>
+    <link rel="icon" href = "https://assets.hackclub.com/icon-rounded.svg"></link>
   <Grid gap = {0} sx={{
     background: 'linear-gradient(180deg, rgba(0,153,255,1) 0%, rgba(130,205,255,1) 100%);', 
     // background: 'linear-gradient(to bottom right, rgba(70, 181, 255, 1), rgba(227, 244, 255, 1))',
