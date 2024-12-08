@@ -29,6 +29,7 @@ import {
           height: ['2vh', '90vh'],
         }}
         >
+          
       {typeof window !== 'undefined' && <ModelViewer />}
       {/* 
           <Image 
