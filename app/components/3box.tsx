@@ -43,7 +43,7 @@ const Threebox = () => {
                   textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' 
                 } }>Design a PCB</Heading>
                 <Image sx={{
-                  width:['28vh', '28vw'],
+                  width:['28vh', '26vw'],
                   height:['32vh', '28vw'],
                   borderRadius: '10px',
                   paddingBottom: '2rem',
@@ -71,7 +71,7 @@ const Threebox = () => {
                   paddingBottom: '1.2rem'
                 } }>Design Art</Heading>
                    <Image sx={{
-                  width:['28vh', '28vw'],
+                  width:['28vh', '26vw'],
                   height:['32vh', '28vw'],
                   borderRadius: '10px',
                   paddingBottom: '2rem'
@@ -95,7 +95,7 @@ const Threebox = () => {
                   textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' 
                 } }>Create Firmware</Heading>
                    <Image sx={{
-                  width:['28vh', '28vw'],
+                  width:['28vh', '26vw'],
                   height:['32vh', '28vw'],
                   borderRadius: '10px',
                   paddingBottom: ['1rem', '2rem']
