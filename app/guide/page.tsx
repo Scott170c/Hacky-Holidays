@@ -14,14 +14,26 @@ import { Box } from 'theme-ui'
 // }
 export default function guide() {
   return (
+    <Box sx={{
+      background: 'rgba(0,153,255,1)',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      paddingBottom: '20px',
+      minHeight: '100vh',
+    }}>
     <Box sx = {{
       fontFamily: 'var(--font-inter)',
-      color: 'black',
+      minHeight: '100vh',
+      color: 'white',
+      width: '75vw',
+      background: 'rgba(0,153,255,1)',
       listStyleType: 'decimal',
-    }}>
-          <MDXProvider >
+   }}>
+          <MDXProvider  >
       <GuideMD components={components}/>
     </MDXProvider>  
+    </Box>
     </Box>
 );
 }

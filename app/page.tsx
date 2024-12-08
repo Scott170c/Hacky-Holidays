@@ -17,11 +17,11 @@ import {
   Heading,
   Text,
 } from 'theme-ui';
-import Footer from './components/footer';
+const Footer = dynamic(() => import('./components/footer'), { ssr: false });
 
 import dynamic from 'next/dynamic';
 const Top = dynamic(() => import('./components/top'), { ssr: false });
-import FAQcard from './components/FAQcard';
+const FAQcard = dynamic(() => import('./components/FAQcard'), {ssr: false});
 const ThreeGrid = dynamic(() => import('./components/3box'), { ssr: false });
 // const ModelViewer = dynamic(() => import('./ModelViewer'), { ssr: false });
 const ModelViewer = dynamic(() => import('./ModelViewer'), { ssr: false });
@@ -54,7 +54,7 @@ export default function Home() {
     // flexDirection: 'column',
     // height:"100%",
     // alignItems: 'center',
-    minHeight: ['400vh', '275vh'],
+    minHeight: ['340vh', '265vh'],
     // background: 'linear-gradient(to bottom right, rgba(70, 181, 255, 1), rgba(227, 244, 255, 1))', 
     // display: 'grid',
     // gridTemplateRows: 'auto auto 1fr auto', // Allows more explicit control
@@ -79,7 +79,7 @@ export default function Home() {
     // padding:'20px',
   }}>
 
-        <Box
+        <Box //grid1
         sx={{
           position: 'absolute',
           top: -10,
@@ -128,6 +128,7 @@ export default function Home() {
         })}
       
             <Top />
+
        
 
           <Box //section 2
@@ -142,52 +143,50 @@ export default function Home() {
             // margin: 'auto',
             height:['auto', '100vh'],
 
-            mt: '20vh',
             // textAlign: 'center'
           }}>
               <Heading as="h3"   sx={{ 
-                    margin: 20,
                     fontFamily: 'var(--font-inter)', 
-                    fontSize: '1.55vw', 
+                    fontSize: ['0.9rem', '1.9rem'], 
                     fontWeight:800,
-                    paddingTop: '1rem',
-                    paddingLeft: '5.5rem',
-                    paddingRight: '5rem',
+                    paddingLeft: '6vw',
+                    paddingRight: '6vw',
                     textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
-
                     color: 'white'
-                  }}>Want a cool christmas decoration? A cool gift for someone you know? Design a unique PCB decoration from scratch and submit it to the project gallery before the 30th!
-                  Once your PR gets approved, you can get your PCB decoration shipped just in time for the holidays!🎄</Heading>
+                  }}>Want a cool christmas decoration? A cool gift for someone you know? Design a unique PCB decoration from scratch and submit it via PR to OnBoard before the 30th!
+                  Once your PR gets approved, you will get your PCB decoration just in time for the holidays!🎄</Heading>
           
          
                   <ThreeGrid/>
               <Heading as="h3"   sx={{ 
-                    margin: 20,
+                    margin: '3',
+                    paddingLeft: '4vw',
+                    paddingRight: '4vw',
                     fontFamily: 'var(--font-inter)', 
-                    fontSize: '1.55vw', 
+                    fontSize: ['0.8rem', '1.9rem'], 
                     fontWeight:800,
-                    paddingTop: '0.5rem',
-                    paddingLeft: '5.5rem',
-                    paddingRight: '5rem',
                     textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
-                    color: 'white',
-                  }}>At the end, Submissions will be peer-reviewed and voted for the top 3. The top 3 will be re-made, and can be used to give out as gifts!<br></br><br></br> 
+                    color: 'white'
+                  }}>At the end, Submissions will be peer-reviewed and voted for the top 3. The top 3 will be re-made, and can be given out as gifts!<br></br><br></br> 
           <Box sx={{fontsize: '5vw'}}>FAQ:</Box></Heading>
-          <Grid columns = {[1,1,1,3]}gap = {[50,5,20,0]} sx = {{paddingTop: '1.5vh', position: 'relative'}}>
+          <Grid columns = {[1, 1, 1, 3]}gap = {[0]} sx = {{paddingTop: '1.5vh'}}>
             <FAQcard question="What are the Requirements?" answer="Your PCB must be under 100mm x 100m in size, 
                                                                   and all parts must come from the parts list.  Since
                                                                   This is an addition to OnBoard, your project must 
                                                                   also follow OnBoard Requirements." />
             <FAQcard question="When are Submission deadlines?" answer="The deadline to submit is the 30th, but if we get higher demand there is a possibility to extend it. If you want to get your decoration in time for Christmas it is best to get it done before the 15th!" />
             <FAQcard question="What about the OnBoard Grant?" answer="You can still apply for the OnBoard grant, but you cannot receive two grants for the same PCB design. Your new PCB must be a different design or a significant change to one you made for this." />
-          </Grid><Heading as="h2" variant="styles.h1" 
+          </Grid>
+          <Heading as="h2" variant="styles.h1" 
                 sx={{ 
                   fontFamily: 'var(--font-inter)', 
-                  fontSize: '1.9rem', 
+                  fontSize: ['0.9rem', '1.9rem'], 
                   fontWeight:800,
                   textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
                   color: 'white'
-                }}>Any more questions? Ask in <a style={{color: 'rgba(90, 142, 248, 1)'}} href="https://hackclub.slack.com/archives/C083SK3G5D3">#hacky-holidays</a>!</Heading></Box>
+                }}>Any more questions? Ask in <a style={{color: 'rgba(90, 142, 248, 1)'}} href="https://hackclub.slack.com/archives/C083SK3G5D3">#hacky-holidays</a>!
+          </Heading>
+        </Box>
     </Grid>
     <Footer></Footer>
     </Box>

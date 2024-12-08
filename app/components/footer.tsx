@@ -20,7 +20,7 @@ import {
             alignItems: 'center',
             // py: '10px',
             justifyContent: 'center',
-            fontSize: '2.7vh',
+            fontSize: '120%',
             fontWeight: 700,
             color: '#90C4FF'
           }}>
