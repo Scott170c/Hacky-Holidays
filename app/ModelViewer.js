@@ -7,7 +7,7 @@ const ModelViewer = () => {
         disable-zoom
         camera-orbit="0deg 0deg 105%"
         disable-pan
-        style={{ width: '25vw' ,height: '40vh'}}
+        style={{ width: '25' ,height: '40vh'}}
       ></model-viewer>
     );
   };

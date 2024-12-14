@@ -22,8 +22,8 @@ import {
           paddingRight: ['0rem', '3rem'],
           width: '100%',
           margin: ['auto'],
-          
-          mt: ['10vh', '0vh'],
+          paddingBottom: '15vh',
+          mt: ['40vh', '5vh'],
           backgroundImage: '../public/background2.png',
 
           height: ['2vh', '90vh'],

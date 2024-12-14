@@ -3,6 +3,7 @@
 
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { keyframes } from '@emotion/react';
+import Snowfall from 'react-snowfall';
 // import '@google/model-viewer';
 // import Script from 'next/script';
 import { useEffect } from 'react';
@@ -35,8 +36,6 @@ const fall = (  rotationDirection: number) => keyframes`
   }
 `;
 
-const faqItems = {question: 'What is Next.js?', answer: 'Next.js is a React framework for production.' };
-
 export default function Home() {
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -44,18 +43,22 @@ export default function Home() {
     }
   }, []);
   return (
-  <Box>
+  <Box sx={{position: 'relative'}}>
     <link rel="icon" href = "https://assets.hackclub.com/icon-rounded.svg"></link>
-  <Grid gap = {0} sx={{
-    background: 'linear-gradient(180deg, rgba(0,153,255,1) 0%, rgba(130,205,255,1) 100%);', 
+    <Snowfall speed={[0.5, 3]} radius={[2.0, 4.0]} snowflakeCount={100} wind={[-0.1, 0.1]} style={{position:'fixed', top:"0"}}/>
+  <Box  sx={{
+    //background: 'linear-gradient(180deg, rgba(0,153,255,1) 0%, rgba(130,205,255,1) 100%);', 
     // background: 'linear-gradient(to bottom right, rgba(70, 181, 255, 1), rgba(227, 244, 255, 1))',
-    // // height: 'auto',
     // display: 'block',
     // display: 'flex',
     // flexDirection: 'column',
     // height:"100%",
+    // display: 'flex',
+    // flexDirection: 'column',
     // alignItems: 'center',
-    minHeight: ['340vh', '265vh'],
+
+    // alignItems: 'center',
+    minHeight: ['265vh' ,'260vh', '230vh'],
     // background: 'linear-gradient(to bottom right, rgba(70, 181, 255, 1), rgba(227, 244, 255, 1))', 
     // display: 'grid',
     // gridTemplateRows: 'auto auto 1fr auto', // Allows more explicit control
@@ -83,17 +86,15 @@ export default function Home() {
         <Box //grid1
         sx={{
           position: 'absolute',
-          top: -10,
+          top: [-380, -50],
           left: 0,
         }}>
           <a href="https://hackclub.com" target="_blank">
-          <Button  >
             <Image src="https://assets.hackclub.com/flag-orpheus-top.svg" sx ={{
               height:"10vh"
             }}></Image>
 
         
-          </Button>
 
           </a>
           
@@ -103,30 +104,7 @@ export default function Home() {
        
     
         
-        {Array.from({ length: 50 }).map((_, index) => {
-          const randomRotationDirection = Math.random() > 0.5 ? 1 : -1;
-          const randomSpeed = Math.random() * 10 + 5;
-          return(
-          <Text
-          key={index}
-          sx={{
-            position: 'absolute',
-            top: '-10%',
-            zIndex: 0,
-            left: `${Math.random() * 90}vw`,
-            animation: `${fall(randomRotationDirection)} ${randomSpeed}s linear infinite`,
-            color: 'white',
-            fontSize: `${Math.random() * 20 + 10}px`,
-            animationDelay: `${Math.random() * 10}s`,
-            transform: `rotate(${randomRotationDirection * 360}deg)`,
-
-
-
-          }}
-          >
-            ❄
-          </Text>)
-        })}
+        
       
             <Top />
 
@@ -143,15 +121,16 @@ export default function Home() {
             width: '100%',
             // margin: 'auto',
             height:['auto', '100vh'],
-
             // textAlign: 'center'
           }}>
+            <br></br>
               <Heading as="h3"   sx={{ 
                     fontFamily: 'var(--font-inter)', 
-                    fontSize: ['0.9rem', '1.9rem'], 
-                    fontWeight:800,
+                    fontSize: ['0.8rem', '1.2rem'], 
+                    fontWeight:700,
                     paddingLeft: '6vw',
                     paddingRight: '6vw',
+                    paddingTop: '12vh',
                     textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
                     color: 'white'
                   }}>Want a cool christmas decoration? A cool gift for someone you know? Design a unique PCB decoration from scratch and submit it via PR to OnBoard before the 30th!
@@ -164,8 +143,8 @@ export default function Home() {
                     paddingLeft: '4vw',
                     paddingRight: '4vw',
                     fontFamily: 'var(--font-inter)', 
-                    fontSize: ['0.8rem', '1.9rem'], 
-                    fontWeight:800,
+                    fontSize: ['0.8rem', '1.2rem'], 
+                    fontWeight:700,
                     textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
                     color: 'white'
                   }}>At the end, Submissions will be peer-reviewed and voted for the top 3. The top 3 will be re-made, and can be given out as gifts!<br></br><br></br> 
@@ -182,14 +161,15 @@ export default function Home() {
                 sx={{ 
                   fontFamily: 'var(--font-inter)', 
                   fontSize: ['0.9rem', '1.9rem'], 
-                  fontWeight:800,
+                  fontWeight:700,
                   textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
-                  color: 'white'
+                  color: 'white',
+                  paddingBottom: '4vh',
                 }}>Any more questions? Ask in <a style={{color: 'rgba(90, 142, 248, 1)'}} href="https://hackclub.slack.com/archives/C083SK3G5D3">#hacky-holidays</a>!
           </Heading>
-        </Box>
-    </Grid>
-    <Footer></Footer>
+          </Box>
+          </Box>
+          <Footer></Footer>
     </Box>
   );
 }
