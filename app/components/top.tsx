@@ -78,7 +78,7 @@ import {
                 }}>
             Design a PCB holiday decoration this winter, get one shipped!
           </Heading>
-          <a href = "/guide">
+          <a href = "https://foul-pig-810.notion.site/hacky-holidays-guide?pvs=4">
           <Button
           sx={{
             mx: ['auto',0],
@@ -91,12 +91,10 @@ import {
             borderRadius: '2rem',
             padding: ['0.6rem 0.6rem', '1rem 2rem'],
             mt: '1rem',
-
           }}>
               <b>&nbsp;Learn to Make a Decoration &nbsp; ➜</b>
           </Button>
           </a>
-
 
           </Box>
      

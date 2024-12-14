@@ -9,7 +9,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     h2: (props) => <Heading as="h2" sx={{ fontSize: 4, color: 'black',       fontFamily: 'var(--font-inter)', 
     }} {...props} />,
     h3: (props) => <Heading as="h3" sx={{ fontSize: 3, color: 'black' }} {...props} />,
-    p: (props) => <Text sx={{ fontSize: 4, color: 'text', paddingRight: '100vw'}} {...props} />,
+    p: (props) => <Text sx={{ fontSize: 4, color: 'text', padding: '10vh'}} {...props} />,
     // Add more custom components as needed
   }
 }
