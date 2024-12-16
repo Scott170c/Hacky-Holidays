@@ -1,31 +1,27 @@
-import {
-    Box,
-    Button,
-    Image,
-    Grid,
-    Heading,
-    Text,
-  } from 'theme-ui';
+import { Box, Text } from 'theme-ui';
 
- const footer = ()=> {
-    return (
-        <footer style={{
-            backgroundColor: '#100056',
-            height: '8vh',
-            width: '100%',
-            position: 'absolute',
-            bottom: '0px',
-            display: 'flex',
-            //flexDirection: 'column',
-            alignItems: 'center',
-            // py: '10px',
-            justifyContent: 'center',
-            fontSize: '120%',
-            fontWeight: 700,
-            color: '#90C4FF'
-          }}>
-            Made with ❤️ by @bright li & @Scott
-        </footer>
-    )
+const Footer = () => {
+  return (
+    <Box
+      as="footer"
+      sx={{
+        backgroundColor: '#100056',
+        height: '8vh',
+        width: '100%',
+        position: 'absolute',
+        bottom: '0px',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        fontSize: '120%',
+        fontWeight: 700,
+        color: '#90C4FF',
+        py: '10px',
+      }}
+    >
+      <Text>Made with ❤️ by @bright li & @Scott</Text>
+    </Box>
+  );
 }
-export default footer;
+
+export default Footer;
