@@ -10,10 +10,10 @@ interface CardProps {
 // Create the component
 const FAQcard: React.FC<CardProps> = ({ question, answer }) => {
   return (
-    <Box sx={styles.card}>
-      <h3 style={styles.question}>{question}</h3>
+    <div className="">
+      <h3 className={styles.question}>{question}</h3>
       <p style={styles.answer}>{answer}</p>
-    </Box>
+    </div>
   );
 };
 
@@ -31,11 +31,7 @@ const styles = {
     overflow: 'hidden',
   },
   question: {
-    fontSize: 'calc(1.2vw + 1.2vh)',
-    fontWeight: 790,
-    color: '#FFFFFF',
-    textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
-    paddingLeft: '2%',
+    "insert tailwind"
   },
   answer: {
     fontSize: 'calc(0.6vw + 0.6vh)',

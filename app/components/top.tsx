@@ -1,34 +1,11 @@
-import {
-    Box,
-    Button,
-    Image,
-    Grid,
-    Heading,
-    Text,
-  } from 'theme-ui';
-  import dynamic from 'next/dynamic';
+import dynamic from 'next/dynamic';
 
-  const ModelViewer = dynamic(() => import('../ModelViewer'), { ssr: false });
+const ModelViewer = dynamic(() => import('../ModelViewer'), { ssr: false });
 
  const tipitytopity = ()=> {
     return (
-        <Box
-        sx={{
-          display: 'flex',
-          flexDirection:['column','column', 'row'],
-          alignItems: 'center',
-          justifyContent: 'center',
-          gap: '1rem',
-          paddingRight: ['0rem', '3rem'],
-          width: '100%',
-          margin: ['auto'],
-          
-          mt: ['10vh', '0vh'],
-          backgroundImage: '../public/background2.png',
-
-          height: ['2vh', '90vh'],
-        }}
-        >
+        <div className="flex flex-col md:flex-row items-center justify-center gap-4 pr-0 md:pr-12 w-full mx-auto mt-[10vh] md:mt-0 bg-[url('../public/background2.png')] bg-no-repeat bg-cover h-[2vh] md:h-[95vh]"
+      >
       {typeof window !== 'undefined' && <ModelViewer />}
       {/* 
           <Image 
@@ -39,68 +16,29 @@ import {
                 width: '300px',
                 height: '200px',
                 // borderRadius: '16px',
-                // boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)',
+                // divShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)',
                 '&:hover': {
                   transform: 'scale(1.1)',
                   transition: 'transform 0.3s ease-in-out',
                 },
               }}
           /> */}
-          <Box
-          sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'left',
-            // justifyContent: 'left',
-            ml: ['0vw','2vw'],
-            // mt: ['1%','12%'],
-            maxWidth: '100%',
-            // textAlign: 'center'
-          }}
-          >
-          <Heading as="h1" variant="styles.h1" 
-                sx={{ 
-                  fontFamily: 'var(--font-inter)', 
-                  fontSize: ['2rem', '6.5rem'], 
-                  fontWeight:800,
-                  textAlign: ['center','center','left'],
-                  textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' 
-                }}>
+          <div className="flex flex-col items-start ml-0 md:ml-[2vw] max-w-full">
+          <h1 className="font-[var(--font-inter)] text-[2rem] md:text-[7rem] font-extrabold text-center md:text-left text-white ">
             Hacky Holidays!
-          </Heading>
-          <Heading as="h2" variant="styles.h1" 
-                sx={{ 
-                  fontFamily: 'var(--font-inter)', 
-                  fontSize: ['0.5rem','1.9rem'], 
-                  fontWeight:800,
-                  textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' 
-                }}>
-            Design a PCB holiday decoration this winter, get one shipped!
-          </Heading>
+          </h1>
+          <h2 className="font-[var(--font-inter)] text-[0.5rem] md:text-[2.2rem] font-bold text-white">
+            Design a PCB holiday decoration this winter, get one shipped
+          </h2>
           <a href = "/guide">
-          <Button
-          sx={{
-            mx: ['auto',0],
-            fontFamily: 'var(--font-inter)',
-            fontSize: ['0.4rem', 'calc(0.6vw + 0.6vh)'],
-            fontWeight: 900,
-            color: 'white',
-            bg: '#f90b0b',
-            // width: 'fit-content',
-            borderRadius: '2rem',
-            padding: ['0.6rem 0.6rem', '1rem 2rem'],
-            mt: '1rem',
-
-          }}>
+          <button className="mx-auto md:mx-0 font-[var(--font-inter)] text-[0.4rem] md:text-[calc(0.6vw+0.6vh)] font-bold text-white bg-[#f90b0b] rounded-[2rem] px-[0.6rem] py-[0.6rem] md:px-[2rem] md:py-[1rem] mt-4">
               <b>&nbsp;Learn to Make a Decoration &nbsp; ➜</b>
-          </Button>
+          </button>
           </a>
 
 
-          </Box>
-     
-        </Box>
-   
+          </div>
+        </div>
 
     )
 }
