@@ -26,11 +26,11 @@ export default function Home() {
         radius={[2.0, 4.0]}
         snowflakeCount={100}
         wind={[-0.1, 0.1]}
-        style={{ position: "fixed", top: 0, left: 0, width: "100%", height: "100%", zIndex: 1 }}
+        style={{ position: "fixed", top: 0, left: 0, width: "100%", height: "100%", zIndex: 1}}
       />
 
       {/* Main Content */}
-      <div className="grid gap-0 bg-gradient-to-b from-[rgba(0,153,255,1)] to-[rgba(130,205,255,1)] min-h-[340vh] md:min-h-[265vh] relative z-0">
+      <div className="grid gap-0 bg-gradient-to-b from-[rgba(0,153,255,1)] to-[rgba(130,205,255,1)] md:h-[100%] relative z-0">
         {/* Header Section */}
         <div className="absolute top-0 left-0">
           <a href="https://hackclub.com" target="_blank" rel="noopener noreferrer">
@@ -49,11 +49,11 @@ export default function Home() {
 
         {/* Main Section */}
         <div className="flex flex-col items-center justify-center text-center text-white px-6">
-          <h3 className="font-inter font-bold text-lg md:text-2xl drop-shadow-md">
+          <h3 className="font-inter font-bold text-lg md:text-2xl drop-shadow-md pt-8 sm:px-8 md:px-16">
           Want a cool christmas decoration? A cool gift for someone you know? Design a unique PCB decoration from scratch and submit it via PR to OnBoard before the 30th! Once your PR gets approved, you will get your PCB decoration just in time for the holidays!🎄
           </h3>
           <ThreeGrid />
-          <h3 className="mt-6 font-inter font-bold text-lg md:text-2xl drop-shadow-md">
+          <h3 className="mt-6 font-inter font-bold text-lg md:text-2xl drop-shadow-md sm:px-8 md:px-16">
             At the end, submissions will be peer-reviewed and voted for the top 3. The top 3 will
             be re-made and can be given out as gifts!
           </h3>
@@ -61,8 +61,8 @@ export default function Home() {
           {/* FAQ Section */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
             <FAQcard
-              question="What are the Requirements?"
-              answer="Your PCB must be under 100mm x 100mm in size and all parts must come from the parts list."
+              question="What can I Make?"
+              answer="You can make a PCB that celebrates any holiday you would like! Including but not limited to: Christmas, New Years, Diwali, and Hanukkah!"
             />
             <FAQcard
               question="When are Submission deadlines?"
@@ -74,11 +74,11 @@ export default function Home() {
             />
           </div>
 
-          <h2 className="font-inter font-bold text-lg md:text-2xl mt-6">
+          <h2 className="font-inter font-bold text-lg md:text-3xl mt-6 pb-8">
             Any more questions? Ask in{" "}
             <a
               href="https://hackclub.slack.com/archives/C083SK3G5D3"
-              className="text-blue-400 underline"
+              className="text-blue-500 underline"
             >
               #hacky-holidays
             </a>
