@@ -55,7 +55,7 @@ const tipitytopity = () => {
           }}>
           Design a PCB holiday decoration this winter, get one shipped!
         </Heading>
-        <a href="https://foul-pig-810.notion.site/hacky-holidays-guide?pvs=4">
+        <a href="/guide">
           <Button
             sx={{
               mx: ['auto', 0],
