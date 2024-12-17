@@ -26,7 +26,7 @@ const ModelViewer = () => {
       alt="A 3D model"
       camera-controls
       disable-zoom
-      camera-orbit="0deg 0deg 105%"
+      camera-orbit="0deg 90deg 105%"
       disable-pan
       style={{ width: '25', height: dimensions.height }}
     ></model-viewer>

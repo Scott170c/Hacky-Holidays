@@ -9,14 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@emotion/react": "^11.13.5",
+    "@emotion/react": "^11.14.0",
     "@google/model-viewer": "^4.0.0",
     "@mdx-js/loader": "^3.1.0",
     "@mdx-js/react": "^3.1.0",
-    "@next/mdx": "^15.0.3",
+    "@next/mdx": "^15.1.0",
+    "@react-three/fiber": "^8.17.10",
     "@types/mdx": "^2.0.13",
+    "@types/three": "^0.171.0",
     "autoprefixer": "^10.4.20",
-    "next": "^15.0.3",
+    "next": "^15.1.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-snowfall": "^2.2.0",
@@ -24,13 +26,13 @@
     "three": "^0.170.0"
   },
   "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "eslint": "^8",
+    "@types/node": "^20.17.10",
+    "@types/react": "^18.3.17",
+    "@types/react-dom": "^18.3.5",
+    "eslint": "^8.57.1",
     "eslint-config-next": "15.0.3",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.16",
-    "typescript": "^5"
+    "typescript": "^5.7.2"
   }
 }
