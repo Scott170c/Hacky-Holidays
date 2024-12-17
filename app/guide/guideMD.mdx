@@ -1,53 +1,68 @@
+# Hacky Holidays Guide
 
-# **Hacky Holidays Guide**
-Hacky Holidays is a limited time YSWS event for making your own PCB tree decorations! There are **3** major steps in making a successful decoration:
+Hacky Holidays is a limited-time YSWS event for making your own PCB tree decorations! There are **3** major steps in making a successful decoration:
 
 1. Choosing your Parts
 2. Designing your PCB
 3. Programming your PCB
 
-### **** This guide serves as a learning tool to help you get started, If you submit the guide PCB you will not be accepted! ****
+### **This guide serves as a learning tool to help you get started. If you submit the guide PCB, you will not be accepted!**
 
 ---
 
-# Choosing Your Parts
+## Choosing Your Parts
 
-When choosing your parts, think about the function of each component, and try to wither out unneeded components. Unneeded components can reduce your decoration’s battery life!
+When choosing your parts, think about the function of each component, and try to eliminate unneeded components. Unneeded components can reduce your decoration’s battery life!
 
-Parts covered in the guide **(THESE MUST BE ON YOUR PCB TO WORK):**
+Parts covered in the guide:
 
-- Neopixels
-- MCU (separate guides for the ESP32 and ch552)
-- Batteries
+- Neopixels (4 pin)
+- Xiao ESP32C3
+- Battery Holder
+- Resistors/Diodes
 
 If you want to add any components **not** on the approved list, ask one of the organizers in #hacky-holidays!
 
 ---
 
-# **Designing your PCB**
+## Designing Your PCB
 
-For this guide, we are going to be using KiCad, so if you are using a different tool your steps might be a bit different! 
+For this guide, we are going to be using KiCad. If you are using a different tool, your steps might be a bit different!
 
-First, open up KiCad, and go to File → New Project… and name it whatever you want! Just make sure you name it something you remember so you can come back to it :P
+First, open up KiCad, and go to `File → New Project…` and name it whatever you want! Just make sure you name it something you remember so you can come back to it!
 
-![image.png](https://cloud-ho0oo25ks-hack-club-bot.vercel.app/0image__67_.png)
+![KiCad New Project](https://prod-files-secure.s3.us-west-2.amazonaws.com/51907c75-c258-4bc2-9858-58c3dcad7100/b3897a23-5653-4616-953d-ac8a225d7be7/image.png)
 
-Then Click on the **Schematic Editor** Button. It will take you to a blank page where you will start designing your PCB!
+Then click on the **Schematic Editor** button. It will take you to a blank page where you will start designing your PCB!
 
-![image (3).png](https://prod-files-secure.s3.us-west-2.amazonaws.com/51907c75-c258-4bc2-9858-58c3dcad7100/4c6c1b0e-1052-4e21-b6f9-44eefa94f9ae/b38b9519-5210-4b7c-9046-fbd9882d3ce7.png)
-
-Now it’s time to branch off…. Click on the link with the microcontroller you plan to use!
-
-Xiao Esp32C3
-
-2nd Microcontroller
+![Schematic Editor](https://prod-files-secure.s3.us-west-2.amazonaws.com/51907c75-c258-4bc2-9858-58c3dcad7100/4c6c1b0e-1052-4e21-b6f9-44eefa94f9ae/b38b9519-5210-4b7c-9046-fbd9882d3ce7.png)
 
 ---
 
-# **Programming your PCB**
+## Programming Your PCB
 
 To program your PCB, use the Arduino IDE and the Neopixels library! Here is a helpful resource to help you get started:
 
-https://learn.adafruit.com/adafruit-neopixel-uberguide/arduino-library-use
+[Adafruit Neopixel Uberguide](https://learn.adafruit.com/adafruit-neopixel-uberguide/arduino-library-use)
 
-# Submissions & Manufacturing
+To simulate your code, you can use [Wokwi](https://wokwi.com/projects/new/esp32-c3).
+
+---
+
+## Submissions & Manufacturing
+
+Once you are ready to submit, create a PR in **OnBoard** with the Hacky-Holidays tag and submit your PR to this form!
+
+PRs must include multiple things:
+
+1. Schematic of your Board
+2. Link to Wokwi with the board working
+
+Once your PR gets approved and you are ready to order, we will order the PCB for you and ship it to your address!
+
+---
+
+## Additional Resources
+
+- [General Info](https://www.notion.so/General-Info-153a1dc89099809d86c0fda32bbf66a9?pvs=21)
+- [How to wire up your LEDs](https://www.notion.so/How-to-wire-up-your-LEDs-154a1dc890998077b10aecd282861452?pvs=21)

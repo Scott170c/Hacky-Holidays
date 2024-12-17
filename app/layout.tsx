@@ -1,3 +1,4 @@
+
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
@@ -10,6 +11,7 @@ import {
   Heading,
   Text,
 } from 'theme-ui';
+import Footer from './components/footer';
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -29,7 +31,7 @@ const inter = localFont({
 
 export const metadata: Metadata = {
   title: "Hacky Holidays",
-  description: "Create a ",
+  description: "Limited-time Hack Club PCB Ornament YSWS 🎄",
 };
 
 export default function RootLayout({
