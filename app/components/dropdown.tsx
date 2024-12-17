@@ -1,76 +1,42 @@
-/** @jsxImportSource theme-ui */
-import { useState } from 'react';
+import React, { useState } from 'react';
 
-const FAQItem = ({ question, answer }) => {
+interface DropdownProps {
+  label: string;
+  options: string[];
+}
+
+const Dropdown: React.FC<DropdownProps> = ({ label, options }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div
-      sx={{
-        borderBottom: '1px solid #ddd',
-        padding: '16px 0',
-      }}
-    >
-      <button
+    <div className="relative inline-block text-left w-full">
+      <button 
+        className="flex justify-between w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" 
         onClick={() => setIsOpen(!isOpen)}
-        sx={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          width: '100%',
-          background: 'none',
-          border: 'none',
-          padding: 0,
-          fontSize: '18px',
-          fontWeight: 'bold',
-          color: '#333',
-          cursor: 'pointer',
-          textAlign: 'left',
-          ':hover': {
-            color: '#0070f3',
-          },
-        }}
       >
-        {question}
-        <span
-          sx={{
-            transform: isOpen ? 'rotate(90deg)' : 'rotate(0)',
-            transition: 'transform 0.2s',
-          }}
-        >
-          ▶
-        </span>
+        {label}
+        <svg className="w-5 h-5 ml-2 -mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+        </svg>
       </button>
+
       {isOpen && (
-        <p
-          sx={{
-            marginTop: '8px',
-            fontSize: '16px',
-            color: '#555',
-            lineHeight: 1.6,
-          }}
-        >
-          {answer}
-        </p>
+        <div className="absolute mt-2 w-full rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+          <div className="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+            {options.map((option, index) => (
+              <button 
+                key={index} 
+                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left" 
+                role="menuitem"
+              >
+                {option}
+              </button>
+            ))}
+          </div>
+        </div>
       )}
     </div>
   );
 };
 
-const FAQ = ({ items }) => {
-  return (
-    <div
-      sx={{
-        maxWidth: '600px',
-        margin: '0 auto',
-        padding: '16px',
-      }}
-    >
-      {items.map((item, index) => (
-        <FAQItem key={index} question={item.question} answer={item.answer} />
-      ))}
-    </div>
-  );
-};
-
-export default FAQ;
+export default Dropdown;
