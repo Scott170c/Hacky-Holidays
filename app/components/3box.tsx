@@ -44,7 +44,7 @@ const Threebox = () => {
                 } }>Design a PCB</Heading>
                 <Image sx={{
                   width:['28vh', '26vw'],
-                  height:['32vh', '28vw'],
+                  height:['30vh', '25vw'],
                   borderRadius: '10px',
                   paddingBottom: '2rem',
                   fill: 'true'
@@ -71,7 +71,7 @@ const Threebox = () => {
                 } }>Design Art</Heading>
                    <Image sx={{
                   width:['28vh', '26vw'],
-                  height:['32vh', '28vw'],
+                  height:['30vh', '25vw'],
                   borderRadius: '10px',
                   paddingBottom: '2rem'
                 }} src="https://cloud-go1uacpkk-hack-club-bot.vercel.app/0image.png"></Image>
@@ -95,7 +95,7 @@ const Threebox = () => {
                 } }>Create Firmware</Heading>
                    <Image sx={{
                   width:['28vh', '26vw'],
-                  height:['32vh', '28vw'],
+                  height:['30vh', '25vw'],
                   borderRadius: '10px',
                   paddingBottom: ['1rem', '2rem']
                 }}

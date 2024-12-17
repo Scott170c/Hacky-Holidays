@@ -17,7 +17,6 @@ export default function Home() {
     }
   }, []);
 
-
   return (
     <div>
       {/* Snowfall effect */}
@@ -26,7 +25,7 @@ export default function Home() {
         radius={[2.0, 4.0]}
         snowflakeCount={100}
         wind={[-0.1, 0.1]}
-        style={{ position: "fixed", top: 0, left: 0, width: "100%", height: "100%", zIndex: 1}}
+        style={{ position: "fixed", top: 0, left: 0, width: "100%", height: "100%", zIndex: 1 }}
       />
 
       {/* Main Content */}
@@ -48,14 +47,13 @@ export default function Home() {
         <Top />
 
         {/* Main Section */}
-        <div className="flex flex-col items-center justify-center text-center text-white px-6">
+        <div className="flex flex-col items-center justify-center text-center text-white px-4 md:px-20 lg:px-52">
           <h3 className="font-inter font-bold text-lg md:text-2xl drop-shadow-md pt-8 sm:px-8 md:px-16">
-          Want a cool christmas decoration? A cool gift for someone you know? Design a unique PCB decoration from scratch and submit it via PR to OnBoard before the 30th! Once your PR gets approved, you will get your PCB decoration just in time for the holidays!🎄
+            Want a cool Christmas decoration? A cool gift for someone you know? Design a unique PCB decoration from scratch and submit it via PR to OnBoard before the 30th! Whether it's for Christmas, Hanukkah, New Year's, or any other holiday, once your PR gets approved, you will get your PCB decoration just in time for the celebrations!
           </h3>
           <ThreeGrid />
           <h3 className="mt-6 font-inter font-bold text-lg md:text-2xl drop-shadow-md sm:px-8 md:px-16">
-            At the end, submissions will be peer-reviewed and voted for the top 3. The top 3 will
-            be re-made and can be given out as gifts!
+            At the end, submissions will be peer-reviewed and voted for the top 3. The top 3 designs will be re-made and can be given out as gifts! Winners will also receive special recognition and a feature on our website. Don't miss this chance to showcase your creativity and spread holiday cheer with your unique PCB decorations!
           </h3>
 
           {/* FAQ Section */}
@@ -71,6 +69,18 @@ export default function Home() {
             <FAQcard
               question="What about the OnBoard Grant?"
               answer="You can still apply for the OnBoard grant, but you cannot receive two grants for the same PCB design."
+            />
+            <FAQcard
+              question="How can I get help?"
+              answer="Join huddles/calls on the Slack or ask in the #electronics channel on Slack."
+            />
+            <FAQcard
+              question="What if I need to use standard assembly only parts?"
+              answer="A limited handful of people will be eligible to have their PCB hand soldered by a Hack Club staff member. You can apply for it on a form."
+            />
+            <FAQcard
+              question="How do I submit my design?"
+              answer="Submit your design via a pull request (PR) to the OnBoard repository before the deadline."
             />
           </div>
 
