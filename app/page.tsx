@@ -154,7 +154,7 @@ export default function Home() {
                                                                   and all parts must come from the parts list.  Since
                                                                   This is an addition to OnBoard, your project must 
                                                                   also follow OnBoard Requirements." />
-            <FAQcard question="When are Submission deadlines?" answer="The deadline to submit is the 30th, but if we get higher demand there is a possibility to extend it. If you want to get your decoration in time for Christmas it is best to get it done before the 15th!" />
+            <FAQcard question="" answer="e" />
             <FAQcard question="What about the OnBoard Grant?" answer="You can still apply for the OnBoard grant, but you cannot receive two grants for the same PCB design. Your new PCB must be a different design or a significant change to one you made for this." />
           </Grid>
           <Heading as="h2" variant="styles.h1" 
