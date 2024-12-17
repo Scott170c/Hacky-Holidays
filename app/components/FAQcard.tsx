@@ -1,5 +1,4 @@
 import React from 'react';
-import { Box, Heading, Text } from 'theme-ui';
 
 interface CardProps {
   question: string;
@@ -8,39 +7,17 @@ interface CardProps {
 
 const FAQcard: React.FC<CardProps> = ({ question, answer }) => {
   return (
-    <Box sx={styles.card}>
-      <Heading as="h3" sx={styles.question}>{question}</Heading>
-      <Text sx={styles.answer}>{answer}</Text>
-    </Box>
+    <div className={styles.card}>
+      <h3 className={styles.question}>{question}</h3>
+      <p className={styles.answer}>{answer}</p>
+    </div>
   );
 };
 
 const styles = {
-  card: {
-    borderRadius: '20px',
-    padding: '16px',
-    margin: '16px',
-    backgroundColor: 'rgba(201, 227, 255, 0.73)',
-    boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
-    width: ['90vw', '60vw', '26vw'],
-    border: '5px solid rgba(39, 114, 193, 0.42)',
-    overflow: 'hidden',
-  },
-  question: {
-    fontSize: ['1.2rem', 'calc(1.2vw + 1.2vh)'],
-    fontWeight: 790,
-    color: '#FFFFFF',
-    textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
-    paddingLeft: '2%',
-  },
-  answer: {
-    fontSize: ['1rem', 'calc(0.6vw + 0.6vh)'],
-    color: '#003180',
-    marginTop: '15px',
-    textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
-    fontWeight: 600,
-    paddingLeft: '2%',
-  },
+  card: "rounded-[20px] p-[16px] my-[16px] bg-[rgba(201,227,255,0.73)] shadow-[0_2px_4px_rgba(0,0,0,0.1)] w-[90vw] sm:w-auto md:w-auto lg:w-[26vw] sm:h-[auto] lg:h-[26vh] border-[5px] border-[rgba(39,114,193,0.42)] overflow-hidden",
+  question: "text-[1.2rem] md:text-[calc(1.2vw+1.2vh)] font-[790] text-white pl-[2%] [text-shadow:_0_4px_4px_rgb(0_0_0_/_25%)] text-left",
+  answer: "text-[1rem] md:text-[calc(0.6vw+0.6vh)] text-[#003180] mt-[15px] font-[700] pl-[2%]  text-left"
 };
 
 export default FAQcard;
