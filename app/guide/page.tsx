@@ -47,7 +47,7 @@ export default function guide() {
           <Box sx={{ position: 'relative' }}>
             <Image src="/OrpheusFlag.svg" alt="Orpheus Flag" width={48} height={48} />
             <Box sx={{ marginLeft: 'auto', marginRight: '1.5rem' }}>
-              <Link href="https://github.com/hackclub/hackpad" passHref legacyBehavior>
+              <Link href="https://github.com/hackclub/onboard" passHref legacyBehavior>
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
@@ -83,8 +83,9 @@ export default function guide() {
           sx={{
             display: ['none', 'block'],
             width: '12rem',
-            position: 'fixed',
+            // position: 'fixed',
             top: '4rem',
+            mr: '1rem',
             height: '100%',
             background: 'white',
           }}

@@ -43,8 +43,8 @@ const Threebox = () => {
                   textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' 
                 } }>Design a PCB</Heading>
                 <Image sx={{
-                  width:['28vh', '26vw'],
-                  height:['30vh', '25vw'],
+                  width:['28vh', '25vw'],
+                  height:['30vh', '23vw'],
                   borderRadius: '10px',
                   paddingBottom: '2rem',
                   fill: 'true'

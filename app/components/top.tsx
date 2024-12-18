@@ -4,7 +4,7 @@ const ModelViewer = dynamic(() => import('../ModelViewer'), { ssr: false });
 
  const tipitytopity = ()=> {
     return (
-        <div className="flex flex-col mb-8 md:flex-row items-center justify-center gap-4 pr-0 md:pr-12 w-full mx-auto mt-[10vh] md:mt-0 bg-[url('https://cloud-dhj4yjv42-hack-club-bot.vercel.app/0backgroundhh.png')] bg-no-repeat bg-center bg-cover sm:h-[120vh] md:h-[95vh]">
+        <div className="flex flex-col mb-8 md:flex-row items-center justify-center gap-4 pr-0 md:pr-12 w-full mx-auto mt-[10vh] md:mt-0 bg-[url('https://cloud-clj0ujnpv-hack-club-bot.vercel.app/0image.png')] border-b-4 bg-no-repeat bg-center bg-cover sm:h-[120vh] md:h-[95vh]">
       {typeof window !== 'undefined' && <ModelViewer />}
       {/* 
           <Image 
@@ -21,7 +21,7 @@ const ModelViewer = dynamic(() => import('../ModelViewer'), { ssr: false });
                   transition: 'transform 0.3s ease-in-out',
                 },
               }}
-          /> */}
+          /> */}h
           <div className="flex flex-col items-start ml-0 md:ml-[2vw] max-w-full">
           <h1 className="text-[2.8rem] md:text-[7rem] font-bold text-center md:text-left text-white [text-shadow:_0_4px_4px_rgb(0_0_0_/_25%)]">
             Hacky Holidays!

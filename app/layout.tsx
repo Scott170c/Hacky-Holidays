@@ -20,8 +20,8 @@ const inter = localFont({
 })
 
 export const metadata: Metadata = {
-  title: "Hacky Holidays",
-  description: "Limited-time Hack Club PCB Ornament YSWS 🎄",
+  title: "Hacky Holidays 🎄",
+  description: "Build a Holiday Decoration, get one Shipped!",
 };
 
 export default function RootLayout({
