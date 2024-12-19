@@ -51,7 +51,9 @@ export default function Home() {
         {/* Main Section */}
         <div className="flex flex-col items-center justify-center text-white px-4 md:px-20">
           <h3 className="font-inter font-bold text-lg md:text-2xl drop-shadow-md pt-8 sm:px-8 md:px-16 lg:px-[9rem]">
-            Want a cool Christmas decoration? A cool gift for someone you know? Design a unique PCB decoration from scratch and submit it via PR to OnBoard before the 30th! Whether it's for Christmas, Hanukkah, New Year's, or any other holiday, once your PR gets approved, you will get your PCB decoration just in time for the celebrations!
+            This holiday season, until Jan 20th, make a festive themed PCB design of one of the many holidays, Christmas, New Years, Diwali, Hanukkah, or any others! You can design a PCB that celebrates any holiday you would like! The PCB can be a decoration, a gift, or anything else you can think of!
+            <br></br><br></br>
+            The PCB can be as simple or as complex as you want, we have some example designs and reference schematics location in our <a href="/guide">guide</a>. You can also use any software you want to design the PCB, but we recommend using Figma, KiCad, or EasyEDA.
           </h3>
           <ThreeGrid />
           <h3 className="mt-6 font-inter font-bold text-lg md:text-2xl drop-shadow-md sm:px-8 md:px-16 lg:px-[9rem]">

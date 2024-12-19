@@ -18,11 +18,11 @@ const tipitytopity = () => {
           Hacky Holidays!
         </h1>
         <h2 className="text-[0.7rem] md:text-[1.9rem] font-bold text-white [text-shadow:_0_4px_4px_rgb(0_0_0_/_25%)] md:-mt-4">
-          Design a PCB holiday decoration this winter, get one shipped!
+          Design a holiday themed PCB this Winter, and get it shipped
         </h2>
         <a href="/guide">
           <button className="mx-auto mb-10 md:mx-0 text-[0.8rem] md:text-[calc(0.6vw+0.6vh)] font-bold text-white bg-[#f76f63] rounded-[2rem] px-4 py-2 md:px-8 md:py-4 mt-4 [text-shadow:_0_4px_4px_rgb(0_0_0_/_25%)] text-center align-middle">
-            <b>&nbsp;Learn to Make a Decoration &nbsp; ➜</b>
+            <b>&nbsp;Learn to make a festive PCB &nbsp; ➜</b>
           </button>
         </a>
       </div>
