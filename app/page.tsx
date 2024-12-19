@@ -50,11 +50,11 @@ export default function Home() {
 
         {/* Main Section */}
         <div className="flex flex-col items-center justify-center text-white px-4 md:px-20">
-          <h3 className="font-inter font-bold text-lg md:text-2xl drop-shadow-md pt-8 sm:px-8 md:px-16">
+          <h3 className="font-inter font-bold text-lg md:text-2xl drop-shadow-md pt-8 sm:px-8 md:px-16 lg:px-[9rem]">
             Want a cool Christmas decoration? A cool gift for someone you know? Design a unique PCB decoration from scratch and submit it via PR to OnBoard before the 30th! Whether it's for Christmas, Hanukkah, New Year's, or any other holiday, once your PR gets approved, you will get your PCB decoration just in time for the celebrations!
           </h3>
           <ThreeGrid />
-          <h3 className="mt-6 font-inter font-bold text-lg md:text-2xl drop-shadow-md sm:px-8 md:px-16">
+          <h3 className="mt-6 font-inter font-bold text-lg md:text-2xl drop-shadow-md sm:px-8 md:px-16 lg:px-[9rem]">
             At the end, submissions will be peer-reviewed and voted for the top 3. The top 3 designs will be re-made and can be given out as gifts! Winners will also receive special recognition and a feature on our website. Don't miss this chance to showcase your creativity and spread holiday cheer with your unique PCB decorations!
           </h3>
           <h3 className="mt-6 font-inter font-bold text-lg md:text-2xl drop-shadow-md sm:px-8 md:px-16">
