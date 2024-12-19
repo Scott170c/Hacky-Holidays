@@ -21,7 +21,7 @@ const ModelViewer = dynamic(() => import('../ModelViewer'), { ssr: false });
                   transition: 'transform 0.3s ease-in-out',
                 },
               }}
-          /> */}h
+          /> */}
           <div className="flex flex-col items-start ml-0 md:ml-[2vw] max-w-full">
           <h1 className="text-[2.8rem] md:text-[7rem] font-bold text-center md:text-left text-white [text-shadow:_0_4px_4px_rgb(0_0_0_/_25%)]">
             Hacky Holidays!
