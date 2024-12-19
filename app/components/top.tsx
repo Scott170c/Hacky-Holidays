@@ -4,7 +4,7 @@ const ModelViewer = dynamic(() => import('../ModelViewer'), { ssr: false });
 
  const tipitytopity = ()=> {
     return (
-        <div className="flex flex-col mb-8 md:flex-row items-center justify-center gap-4 pr-0 md:pr-12 w-full mx-auto mt-[10vh] md:mt-0 bg-[url('https://cloud-10og03gkh-hack-club-bot.vercel.app/0background.png')] border-b-4 bg-no-repeat bg-center bg-cover sm:h-[120vh] md:h-[95vh]">
+        <div className="flex flex-col mb-8 md:flex-row items-center justify-center gap-4 pr-0 md:pr-12 w-full mx-auto pt-[10vh] md:pt-0 bg-[url('https://cloud-clj0ujnpv-hack-club-bot.vercel.app/0image.png')] border-b-4 bg-no-repeat bg-center bg-cover sm:h-[120vh] md:h-[95vh]">
       {typeof window !== 'undefined' && <ModelViewer />}
       {/* 
           <Image 
