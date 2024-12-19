@@ -4,7 +4,7 @@
 import { useEffect } from "react";
 import Snowfall from "react-snowfall";
 import dynamic from "next/dynamic";
-
+import { Grid } from "theme-ui";
 const Footer = dynamic(() => import("./components/footer"), { ssr: false });
 const Top = dynamic(() => import("./components/top"), { ssr: false });
 const FAQcard = dynamic(() => import("./components/FAQcard"), { ssr: false });
@@ -19,6 +19,8 @@ export default function Home() {
 
   return (
     <div>
+        <link rel="icon" href = "https://assets.hackclub.com/icon-rounded.svg"></link>
+
       {/* Snowfall effect */}
       <Snowfall
         speed={[0.5, 3]}
@@ -47,7 +49,7 @@ export default function Home() {
         <Top />
 
         {/* Main Section */}
-        <div className="flex flex-col items-center justify-center text-center text-white px-4 md:px-20 lg:px-52">
+        <div className="flex flex-col items-center justify-center text-white px-4 md:px-20">
           <h3 className="font-inter font-bold text-lg md:text-2xl drop-shadow-md pt-8 sm:px-8 md:px-16">
             Want a cool Christmas decoration? A cool gift for someone you know? Design a unique PCB decoration from scratch and submit it via PR to OnBoard before the 30th! Whether it's for Christmas, Hanukkah, New Year's, or any other holiday, once your PR gets approved, you will get your PCB decoration just in time for the celebrations!
           </h3>
@@ -57,10 +59,10 @@ export default function Home() {
           </h3>
 
           {/* FAQ Section */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+          <Grid columns = {[1, 1, 1, 3]}gap = {[0]} sx = {{paddingTop: '1.5vh'}}>
             <FAQcard
               question="What can I Make?"
-              answer="You can make a PCB that celebrates any holiday you would like! Including but not limited to: Christmas, New Years, Diwali, and Hanukkah!"
+              answer="You can make a PCB that celebrates any holiday you would like! Including but not limited to: Christmas, New Years, Diwali, and Hanukkah! It can also be something Festivus."
             />
             <FAQcard
               question="When are Submission deadlines?"
@@ -82,7 +84,7 @@ export default function Home() {
               question="How do I submit my design?"
               answer="Submit your design via a pull request (PR) to the OnBoard repository before the deadline."
             />
-          </div>
+          </Grid>
 
           <h2 className="font-inter font-bold text-lg md:text-3xl mt-6 pb-8">
             Any more questions? Ask in{" "}

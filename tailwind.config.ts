@@ -14,5 +14,11 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/aspect-ratio'),
+    require('@tailwindcss/line-clamp'),
+    require('tailwindcss-filters'), // Make sure this is included
+  ],
 } satisfies Config;
