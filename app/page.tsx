@@ -57,7 +57,9 @@ export default function Home() {
           <h3 className="mt-6 font-inter font-bold text-lg md:text-2xl drop-shadow-md sm:px-8 md:px-16">
             At the end, submissions will be peer-reviewed and voted for the top 3. The top 3 designs will be re-made and can be given out as gifts! Winners will also receive special recognition and a feature on our website. Don't miss this chance to showcase your creativity and spread holiday cheer with your unique PCB decorations!
           </h3>
-
+          <h3 className="mt-6 font-inter font-bold text-lg md:text-2xl drop-shadow-md sm:px-8 md:px-16">
+            FAQ:
+          </h3>
           {/* FAQ Section */}
           <Grid columns = {[1, 1, 1, 3]}gap = {[0]} sx = {{paddingTop: '1.5vh'}}>
             <FAQcard
