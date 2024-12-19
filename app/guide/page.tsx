@@ -2,10 +2,10 @@
 import { keyframes } from '@emotion/react';
 import GuideMD from './guideMD.mdx';
 import { MDXProvider } from '@mdx-js/react';
-import components from '../components/mdx';
+import components from '../components/shared/MDXComponents';
 import { Box } from 'theme-ui';
 import Image from 'next/image';
-import SideBar from "../components/SideBar";
+import SideBar from "./SideBar";
 import Link from 'next/link';
 
 const fadeIn = keyframes({ from: { opacity: 0 }, to: { opacity: 1 } });
