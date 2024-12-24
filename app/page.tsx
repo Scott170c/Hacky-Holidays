@@ -140,7 +140,7 @@ export default function Home() {
 										PCB hand soldered by a Hack Club staff member. You can apply
 										for it on a form. Apply{" "}
 										<a
-											href="https://airtable.com/shr3Z6Z9Z9Z9Z9Z9Z"
+											href="https://forms.hackclub.com/t/oUxL8uShxXus"
 											className="text-blue-500 underline"
 										>
 											here
