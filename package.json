@@ -32,11 +32,11 @@
     "remark-gfm": "^4.0.0",
     "tailwindcss-filters": "^3.0.0",
     "theme-ui": "^0.17.1",
-    "three": "^0.170.0"
+    "three": "0.170.0"
   },
   "devDependencies": {
     "@types/node": "^20.17.10",
-    "@types/react": "^18.3.17",
+    "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",
     "eslint": "^9.17.0",
     "eslint-config-next": "15.0.3",

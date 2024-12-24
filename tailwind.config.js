@@ -16,12 +16,18 @@ module.exports = {
         '265vh': '265vh',
         '340vh': '340vh',
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            maxWidth: '100ch', // add required value here
+          }
+        }
+      },
     },
   },
   plugins: [
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
     require('@tailwindcss/aspect-ratio'),
-    require('tailwindcss-filters'), // Make sure this is included
   ],
 };
